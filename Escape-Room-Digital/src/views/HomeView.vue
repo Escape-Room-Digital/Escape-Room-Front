@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <HelloWorld />
 </template>
 
@@ -16,3 +16,4 @@ export default defineComponent({
   },
 });
 </script>
+ -->
