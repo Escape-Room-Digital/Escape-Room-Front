@@ -17,11 +17,11 @@
         <v-btn
           v-for="icon in icons"
           :key="icon"
-          class="mx-2 icon"
+          class="mx-2"
           :icon="icon"
           variant="plain"
           size="small"
-        ></v-btn>
+        id="icon_footer" ></v-btn>
       </div>
     </v-footer>
   </v-app>
@@ -47,7 +47,7 @@ const icons = ref([
     color:aliceblue;
   }
 
-  .icon {
+#icon_footer {
     color:aliceblue;
   }
 </style>
