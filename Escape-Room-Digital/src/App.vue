@@ -48,7 +48,7 @@ const icons = ref([
   }
 
   .icon {
-    color:aliceblue
+    color:aliceblue;
   }
 </style>
 
