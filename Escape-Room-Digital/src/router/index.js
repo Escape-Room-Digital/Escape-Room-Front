@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import LoginMember from '../views/LoginMember.vue'
-import PanelAdmin from '../views/Admin/PanelAdmin.vue'
+import PanelAdmin from '../views/PanelAdmin.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
