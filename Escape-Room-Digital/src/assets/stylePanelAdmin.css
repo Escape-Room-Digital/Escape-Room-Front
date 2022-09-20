@@ -68,7 +68,7 @@
           }
 
       }
-      @media (max-width: 1120px){
+      @media (max-width: 600px){
         .container_options {
           display: flex;
           flex-direction: column;
