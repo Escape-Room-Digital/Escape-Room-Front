@@ -1,11 +1,22 @@
+
+<script setup>
+import Header from './components/Header.vue';
+
+import { ref } from "vue";
+  
+const icons = ref(["mdi-facebook", "mdi-twitter", "mdi-instagram"]);
+const drawer = null
+</script>
+
+
 <template>
   <v-app>
-    <v-app-bar app>
-      <!-- -->
-    </v-app-bar>
+   <Header/>
+     
+    
     <v-main>
       <v-container fluid>
-        <router-view />
+        <RouterView/>
       </v-container>
     </v-main>
     <v-footer class="d-flex flex-column" app>
@@ -21,34 +32,25 @@
           :icon="icon"
           variant="plain"
           size="small"
-        id="icon_footer" ></v-btn>
+          id="icon_footer"
+        ></v-btn>
       </div>
     </v-footer>
+   
   </v-app>
 </template>
 
-<script setup>
-import { ref } from "vue";
-
-const icons = ref([
-  "mdi-facebook",
-  "mdi-twitter",
-  "mdi-instagram"]);
-</script>
-
-
 <style>
-  .container_footer {
-    background-color: #FF4702
-;
-  }
+.container_footer {
+  background-color: #ff4702;
+}
 
-  .text_footer{
-    color:aliceblue;
-  }
+.text_footer {
+  color: aliceblue;
+}
 
 #icon_footer {
-    color:aliceblue;
-  }
+  color: aliceblue;
+}
 </style>
 
