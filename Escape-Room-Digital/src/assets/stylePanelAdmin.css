@@ -15,7 +15,7 @@
         background-color: black;
         color: #ff4702;
       }
-      @media (max-width:600px) {
+      @media (max-width:600px) and (min-width:600px) {
         #container_title{
           display: flex;
           justify-content: center;
@@ -26,30 +26,34 @@
           color: #ff4702;
         }
       }
-      p {
+    #title_admin {
         margin-top: 3vh;
         font-size: 4vh;
       }
       @media (max-width: 400px) {
-        p {
+      #title_dmin {
          margin-left: 3vh;
         }
       }
-      h2 {
+      .title_options {
         color:black;
         display: flex;
         justify-content: center;
         text-align: center;
         margin-top: 5vh;
+        font-size: 4vh;
       }
-      @media (max-width: 1200px){
-        h2{
+      @media screen and (max-width: 1200px) and (min-width:300px){
+        .title_options{
             display: flex;
             justify-content: center;
             text-align: center;
-            margin-top: 5vh;
+            font-size: 4vh;
+            margin-top: 1vh;
         }
+        
       }
+      
       .container_options {
         display: flex;
         margin-top: 10vh;

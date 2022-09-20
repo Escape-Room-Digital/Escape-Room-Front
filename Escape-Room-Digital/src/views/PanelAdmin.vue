@@ -5,27 +5,27 @@
 <template>
   <div class="container_admin_options">
     <div id="container_title">
-      <p>Panel de Administrador</p>
+      <p id="title_admin">Panel de Administrador</p>
     </div>
 
     <div class="container_options">
       <div id="container_scaperooms">
-        <h2>Escape Rooms</h2>
+        <p class="title_options">Escape Rooms</p>
       </div>
 
       <div id="container_pruebasLogica">
-        <h2>Pruebas de Logica</h2>
+        <p  class="title_options">Pruebas de Logica</p>
       </div>
 
       <div id="container_pruebasCodigo">
-        <h2>Pruebas de Codigo</h2>
+        <p  class="title_options">Pruebas de Codigo</p>
       </div>
 
       <div id="container_listadoCandidatos">
-        <h2>Listado de Candidatos</h2>
+        <p  class="title_options">Listado de Candidatos</p>
       </div>
       <div id="container_listadoCandidatosPruebaCompletada">
-        <h2>Pruebas Completadas</h2>
+        <p  class="title_options">Pruebas Completadas</p>
       </div>
     </div>
   </div>
