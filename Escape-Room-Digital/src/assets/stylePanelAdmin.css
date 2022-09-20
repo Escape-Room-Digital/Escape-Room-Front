@@ -59,11 +59,18 @@
       @media (max-width: 1800px) {
         .container_options {
             display: flex;
-            flex-direction: column;
-            margin-top: 10vh;
+           margin-top: 10vh;
             gap: 2vh;
           }
 
+      }
+      @media (max-width: 1120px){
+        .container_options {
+          display: flex;
+          flex-direction: column;
+         margin-top: 10vh;
+          gap: 2vh;
+        }
       }
       #container_scaperooms {
         width: 30vh;
