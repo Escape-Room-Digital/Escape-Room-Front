@@ -3,15 +3,16 @@
 </script>
 
 <template>
+
   <div class="container_admin_options">
     <div id="container_title">
       <p>Panel de Administrador</p>
     </div>
 
     <div class="container_options">
-      <div id="container_scaperooms">
+      <button  id="container_scaperooms">
         <h2>Escape Rooms</h2>
-      </div>
+      </button>
 
       <div id="container_pruebasLogica">
         <h2>Pruebas de Logica</h2>
@@ -29,6 +30,9 @@
       </div>
     </div>
   </div>
+
+
+
 </template>
 
 <style scoped>
