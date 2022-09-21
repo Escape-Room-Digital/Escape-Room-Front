@@ -6,27 +6,27 @@
 
   <div class="container_admin_options">
     <div id="container_title">
-      <p>Panel de Administrador</p>
+      <p id="title_admin">Panel Administrador</p>
     </div>
 
     <div class="container_options">
-      <button  id="container_scaperooms">
-        <h2>Escape Rooms</h2>
-      </button>
+      <div id="container_scaperooms">
+        <p class="title_options"><strong>Escape Rooms</strong></p>
+      </div>
 
       <div id="container_pruebasLogica">
-        <h2>Pruebas de Logica</h2>
+        <p  class="title_options"><strong>Pruebas de Logica</strong></p>
       </div>
 
       <div id="container_pruebasCodigo">
-        <h2>Pruebas de Codigo</h2>
+        <p  class="title_options"><strong>Pruebas de Codigo</strong></p>
       </div>
 
       <div id="container_listadoCandidatos">
-        <h2>Listado de Candidatos</h2>
+        <p  class="title_options"><strong>Listado de Candidatos</strong></p>
       </div>
       <div id="container_listadoCandidatosPruebaCompletada">
-        <h2>Pruebas Completadas</h2>
+        <p  class="title_options"><strong>Pruebas Completadas</strong></p>
       </div>
     </div>
   </div>
