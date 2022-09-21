@@ -36,7 +36,6 @@ const drawer = null
         ></v-btn>
       </div>
     </v-footer>
-   
   </v-app>
 </template>
 
@@ -53,5 +52,7 @@ const drawer = null
 #icon_footer {
   color: aliceblue;
 }
+
+@import './assets/base.css'
 </style>
 
