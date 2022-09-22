@@ -17,9 +17,7 @@
       max-width="150"
       src="https://femcoders.factoriaf5.org/wp-content/uploads/2021/12/factoria-web.png"
     ></v-img>
-    <v-app-bar-title>Escape Room Digital</v-app-bar-title>
-    <v-spacer></v-spacer>
-
+    <v-app-bar-title class="text-center title-bar"> Escape Room Digital </v-app-bar-title>
     <v-btn>
         <RouterLink to="/"><a class="text-link">Home</a></RouterLink>
     </v-btn>
@@ -37,5 +35,8 @@
 .text-link {
   text-decoration: none;
   color: black;
+}
+.title-bar{
+  font-family: 'Poppins', sans-serif;
 }
 </style>

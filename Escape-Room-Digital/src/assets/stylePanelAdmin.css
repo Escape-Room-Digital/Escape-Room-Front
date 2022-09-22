@@ -1,113 +1,123 @@
+.container_admin_options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    .container_admin_options {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
 
-      
-      #container_title {
-        display: flex;
-        justify-content: center;
-        width: 70vh;
-        height: 13vh;
-        border-radius: 10px;
-        background-color: black;
-        color: #ff4702;
-      }
-      @media (max-width:600px) and (min-width:600px) {
-        #container_title{
-          display: flex;
-          justify-content: center;
-          width: 50vh;
-          height: 13vh;
-          border-radius: 10px;
-          background-color: black;
-          color: #ff4702;
-        }
-      }
-    #title_admin {
-        margin-top: 3vh;
-        font-size: 4vh;
-      }
-      @media (max-width: 400px) {
-      #title_dmin {
-         margin-left: 3vh;
-        }
-      }
-      .title_options {
-        color:black;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        margin-top: 5vh;
-        font-size: 4vh;
-      }
-      @media screen and (max-width: 1200px) and (min-width:300px){
-        .title_options{
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            font-size: 4vh;
-            margin-top: 1vh;
-        }
-        
-      }
-      
-      .container_options {
-        display: flex;
-        margin-top: 10vh;
-        gap: 5vh;
-      }
+#container_title {
+  display: flex;
+  justify-content: center;
+  width: 70vh;
+  height: 10vh;
+  border-radius: 10px;
+  background-color: black;
+  color: #ff4702;
+}
 
-      @media (max-width: 1800px) {
-        .container_options {
-            display: flex;
-           margin-top: 10vh;
-            gap: 2vh;
-          }
+@media (max-width:600px) and (min-width:600px) {
+  #container_title {
+    display: flex;
+    justify-content: center;
+    width: 50vh;
+    height: 10vh;
+    border-radius: 10px;
+    background-color: black;
+    color: #ff4702;
+  }
+}
 
-      }
-      @media (max-width: 1120px){
-        .container_options {
-          display: flex;
-          flex-direction: column;
-         margin-top: 10vh;
-          gap: 2vh;
-        }
-      }
-      #container_scaperooms {
-        width: 30vh;
-        height: 20vh;
-        background-color: #fff;
-        border: orangered solid;
-        border-radius: 10px;
-      }
-      #container_pruebasLogica {
-        width: 30vh;
-        height: 20vh;
-        background-color: #fff;
-        border: orangered solid;
-        border-radius: 10px;
-      }
-      #container_pruebasCodigo {
-        width: 30vh;
-        height: 20vh;
-        background-color: #fff;
-        border: orangered solid;
-        border-radius: 10px;
-      }
-      #container_listadoCandidatos {
-        width: 30vh;
-        height: 20vh;
-        background-color: #fff;
-        border: orangered solid;
-        border-radius: 10px;
-      }
-      #container_listadoCandidatosPruebaCompletada {
-        width: 30vh;
-        height: 20vh;
-        background-color: #fff;
-        border: orangered solid;
-        border-radius: 10px;
-      }
+#title_admin {
+  margin-top: 2vh;
+  font-size: 4vh;
+}
+
+@media (max-width: 400px) {
+  #title_dmin {
+    margin-left: 3vh;
+  }
+}
+
+.title_options {
+  color: black;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin:4vh;
+  font-size: 2vh;
+}
+
+@media screen and (max-width: 1200px) and (min-width:300px) {
+  .title_options {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 2vh;
+    margin: 4vh;
+  }
+
+}
+
+.container_options {
+  display: flex;
+  margin-top: 10vh;
+  gap: 8vh; 
+}
+
+@media (max-width: 1800px) {
+  .container_options {
+    display: flex;
+    margin-top: 10vh;
+     gap: 8vh; 
+  }
+
+}
+
+@media (max-width: 600px) {
+  .container_options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+    gap: 2vh;
+  }
+}
+
+#container_scaperooms {
+  width: 20vh;
+  height: 15vh;
+  background-color: #fff;
+  border: orangered solid;
+  border-radius: 10px;
+}
+
+#container_pruebasLogica {
+  width: 20vh;
+  height: 15vh;
+  background-color: #fff;
+  border: orangered solid;
+  border-radius: 10px;
+}
+
+#container_pruebasCodigo {
+  width: 20vh;
+  height: 15vh;
+  background-color: #fff;
+  border: orangered solid;
+  border-radius: 10px;
+}
+
+#container_listadoCandidatos {
+  width: 20vh;
+  height: 15vh;
+  background-color: #fff;
+  border: orangered solid;
+  border-radius: 10px;
+}
+
+#container_listadoCandidatosPruebaCompletada {
+  width: 20vh;
+  height: 15vh;
+  background-color: #fff;
+  border: orangered solid;
+  border-radius: 10px;
+}
