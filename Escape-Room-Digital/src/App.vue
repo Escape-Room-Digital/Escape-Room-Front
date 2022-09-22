@@ -14,8 +14,8 @@ const drawer = null
    <Header/>
      
     
-    <v-main>
-      <v-container fluid>
+    <v-main fluid app>
+      <v-container>
         <RouterView/>
       </v-container>
     </v-main>
@@ -53,6 +53,6 @@ const drawer = null
   color: aliceblue;
 }
 
-@import './assets/base.css'
+
 </style>
 

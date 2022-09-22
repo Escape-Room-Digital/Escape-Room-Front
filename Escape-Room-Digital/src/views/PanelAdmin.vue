@@ -11,11 +11,11 @@
  <div class="container_options">
 
 <div value="escaperomm" id="container_scaperooms">
-  <p class="title_options"><strong>Escape Rooms</strong></p>
+  <p class="title_options"><strong> <RouterLink to="/tablerooms">Scape Rooms</RouterLink></strong></p>
 </div>
 
 <div id="container_pruebasLogica">
-  <p  class="title_options"><strong>Pruebas de Logica</strong></p>
+  <p  class="title_options"><strong><RouterLink to="/tablelogictest">Pruebas Logicas</RouterLink></strong></p>
 </div>
 
 <div id="container_pruebasCodigo">
