@@ -2,11 +2,7 @@
 
 <template>
   <div class="imagen">
-  <img
-    src="https://femcoders.factoriaf5.org/wp-content/uploads/2021/12/factoria-web.png"
-    alt="image_logo"
-    class="logo_f5"
-  />
+ 
   <div class="container_home">
     <div id="container_message_welcome">
       <p id="message">
