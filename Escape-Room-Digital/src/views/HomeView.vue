@@ -17,64 +17,20 @@
         vuelta.
       </p>
     </div>
-    <div id="button_home">
-      <p id="word_button">Empezar Pruebas</p>
-      <!-- <v-container fluid class="pa-0">
-        <v-row align="center" justify-center>
-          <v-col cols="12" sm="6">
-            <div class="text-center">
-              <div class="my-2">
-                <v-btn color="warning" dark>Empezar Pruebas</v-btn>
-              </div>
-            </div>
-          </v-col>
-        </v-row>
-      </v-container> -->
-    </div>
+    <RouterLink to="/landingpage">
+      <button id="button_home">
+
+        <a id="word_button">Empezar Pruebas</a>
+  
+      </button>
+
+    </RouterLink>
+  
     
   </div>
 </template>
 
 <style scoped>
-.container_home {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY8HR-DzuTxhmbYQ-vnS5v0DJYc43czHXSSw&usqp=CAU");
-  background-size:100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#container_message_welcome {
-  width: 70vh;
-  height: 80vh;
-  border-radius: 10px;
-  background-color: black;
-  opacity: 0.7;
-}
-.logo_f5 {
-  height: 20vh;
-  width: 40vh;
-}
-#message {
-  color: aliceblue;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin: 13vh;
-}
-#button_home{
-  margin:3vh ;
-  width: 30vh;
-  height: 6vh;
-  border-radius: 10px;
-  background-color: black;
-    opacity: 0.7;
-  
-}
-#word_button{
-  display: flex;
-  justify-content: center;
-  color: aliceblue;
-  margin: 1vh;
-}
+@import "../assets/styleHome.css"
 
 </style>
