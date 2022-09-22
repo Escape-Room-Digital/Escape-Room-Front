@@ -4,13 +4,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: 80%;
   }
   #container_message_welcome {
     width: 70vh;
     height: 80vh;
     border-radius: 10px;
     background-color: black;
-    opacity: 0.7;
+    opacity: 80%;
+    
   }
   .logo_f5 {
     height: 20vh;
@@ -22,6 +24,8 @@
     justify-content: center;
     text-align: center;
     margin: 13vh;
+    font-family: Poppins;
+
   }
   #button_home{
     margin:3vh ;
@@ -37,4 +41,5 @@
     justify-content: center;
     color: aliceblue;
     margin: 1vh;
+    font-family: Poppins;
   }
