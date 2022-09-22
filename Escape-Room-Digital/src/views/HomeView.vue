@@ -1,6 +1,7 @@
 <script setup></script>
 
 <template>
+  <div class="imagen">
   <img
     src="https://femcoders.factoriaf5.org/wp-content/uploads/2021/12/factoria-web.png"
     alt="image_logo"
@@ -27,6 +28,7 @@
     </RouterLink>
   
     
+  </div>
   </div>
 </template>
 
