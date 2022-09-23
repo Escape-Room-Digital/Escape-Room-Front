@@ -15,7 +15,7 @@
   color: #ff4702;
 }
 
-@media (max-width:600px) and (min-width:600px) {
+@media screen and (max-width:600px) and (min-width:600px) {
   #container_title {
     display: flex;
     justify-content: center;
@@ -32,7 +32,7 @@
   font-size: 4vh;
 }
 
-@media (max-width: 400px) {
+@media  screen and (max-width: 400px) {
   #title_dmin {
     margin-left: 3vh;
   }
