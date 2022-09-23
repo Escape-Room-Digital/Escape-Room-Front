@@ -9,9 +9,8 @@ Es una aplicación de Escape Rooms especialmente diseñada para la integracion d
 
 ## Roadmap
 
-- Additional browser support
+- https://www.figma.com/file/ZFWVjAgM02zu3pWCKDvNbN/UserFlowScapeRoom?node-id=1%3A2
 
-- Add more integrations
 
 
 ## Documentation
@@ -23,27 +22,75 @@ Es una aplicación de Escape Rooms especialmente diseñada para la integracion d
 
 This project is used by the following companies:
 
-- Company 1
-- Company 2
+- Facoria F5
 
-
-## Features
-
-- Light/dark mode toggle
-- Live previews
-- Fullscreen mode
-- Cross platform
 
 
 ## Installation
 
 Install my-project with npm
 
+
+```bash Back
+  npm install laravel
+  npm install composer
+
+```
+
+```bash Front
+  npm install vue
+    npm install axios
+    npm install vuetify
+    npm install quasar
+
+```
+
 ```bash
-  npm install my-project
+  npm install 
   cd my-project
 ```
     
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://link-to-project
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash Back
+  npm install laravel
+  npm install composer
+
+```
+
+```bash Front
+  npm install vue
+    npm install axios
+    npm install vuetify
+    npm install quasar
+
+```
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
+
 ## API Reference
 
 #### Get all items
@@ -71,47 +118,20 @@ Install my-project with npm
 Takes two numbers and returns the sum.
 
 
-## Run Locally
-
-Clone the project
-
-```bash
-  git clone https://link-to-project
-```
-
-Go to the project directory
-
-```bash
-  cd my-project
-```
-
-Install dependencies
-
-```bash
-  npm install
-```
-
-Start the server
-
-```bash
-  npm run start
-```
-
-
 ## Running Tests
 
 To run tests, run the following command
 
 ```bash
-  npm run test
+  npm run test 
 ```
 
 
 ## Tech Stack
 
-**Client:** React, Redux, TailwindCSS
+**Client:** Vue3, nextjs, quasar js, vuetify.
 
-**Server:** Node, Express
+**Server:** Laravel, composer
 
 ## Color Reference
 
@@ -124,17 +144,17 @@ To run tests, run the following command
 
 ## Demo
 
-Insert gif or link to demo
+https://www.figma.com/file/FojGlYBBtVpu4J0p7aT0Mu/Project?node-id=0%3A1
 
-
-## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 
 ## Authors
+- [@JDDeveloper1](https://github.com/orgs/Escape-Room-Digital/people/JDDeveloper1)
+- [@prlongoria](https://github.com/orgs/Escape-Room-Digital/people/prlongoria)
+- [@BigBen999](https://github.com/orgs/Escape-Room-Digital/people/BigBen999)
+- [@lucyalvarado4692](https://github.com/orgs/Escape-Room-Digital/people/lucyalvarado4692)
+- [@Mlobos1111](https://github.com/orgs/Escape-Room-Digital/people/Mlobos1111)
 
-- 
 
 
 ## License
