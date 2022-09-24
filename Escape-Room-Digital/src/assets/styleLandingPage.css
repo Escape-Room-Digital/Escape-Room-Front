@@ -51,7 +51,7 @@ img {
     margin-top: 15vh;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
     #container_photo {
         display: flex;
         flex-direction: column;
@@ -130,8 +130,14 @@ img {
     #container_test_logic {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
 
     }
+}
+#container_example_test_logic {
+
 }
 
 #container_form_example {
@@ -152,9 +158,21 @@ img {
     border-radius: 15px;
     margin: 3vh;
 }
+@media (max-width:400px) {
+    #container_title_test {
+        width: 30vh;
+    }
+}
+
+
 #text_title_test {
     color: #ffffff;
     margin: 5vh;
+}
+@media (max-width:400px) {
+    #text_title_test {
+        font-size: 2vh;
+    }
 }
 
 #container_title_statement {
@@ -166,9 +184,20 @@ img {
     height: 6vh;
     border-radius: 15px;
 }
+@media (max-width:400px){
+    #container_title_statement {
+        width: 30vh;
+    }
+}
+
 #text_title_statament {
     color: #ffffff;
     margin: 2vh;
+}
+@media (max-width:400px){
+    #text_title_statament{
+        font-size: 2vh;
+    }
 }
 
 
@@ -176,8 +205,13 @@ img {
     display: flex;
     align-items: center;
     background-color: lightslategrey;
-    margin: 5vh;
+    margin: 9vh;
     border-radius: 10px;
+}
+@media (max-width:400px) {
+    #container_text_statament{
+        width: 50vh;
+    }
 }
 #text_statament {
     color: #ffffff;
@@ -193,10 +227,20 @@ img {
     margin: 5vh;
     border-radius: 10px;
 }
+@media (max-width:400px){
+    #container_question_statament{
+        width:30vh;
+    }
+}
 #text_question_statament {
     color: #ffffff;
     margin: 1vh;
     
+}
+@media(max-width:400px){
+    #text_question_statament {
+        font-size: 2vh;
+    }
 }
 #list_date_test_logic {
     display: flex;
@@ -261,9 +305,117 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
     height: 35vh;
     margin-top: 10vh;
     background-color: black;
+}
+/*EXAMPLE EDIT CODE*/
+#container_edit_code{
+    display: flex;
+    margin-top: 10vh;
+}
+@media screen and (max-width:1200px) {
+    #container_edit_code {
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+
+#container_statament_edit_code{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50vh;
+    height: auto;
+    border-radius: 10px;
+    background-color: black;
+}
+#container_text_title_edit_code{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: #ff4702;
+    width: 30vh;
+    height: 10vh;
+    border-radius: 15px;
+    margin: 3vh;
+}
+#text_title_edit_code{
+    color: aliceblue;
+    font-size: 3vh;
+}
+#container_text_edit_code{
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.text_edit_code{
+    color:white;
+    font-size: 3vh;
+}
+#container_exercise_edit_code{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50vh;
+    height: auto;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+#format_edit_code{
+    border: black solid 1px;
+    margin: 4vh;
+    width: 40vh;
+    height: 60vh;
+}
+#title_exercise_edit_code{
+    margin: 2vh;
+    font-size: 3vh;
+}
+#container_text_body_exercise{
+    display: flex;
+}
+#text_body_exercise{
+    display: flex;
+    margin: 5vh;
+    font-size: 2vh;
+}
+
+#container_instruction_form_edit_code{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* BUTTONS */
+#container_button_edit_code{
+    display: flex;
+    margin: 2vh;
+    margin-right: 32vh;
+    
+
+}
+
+#button_edit_code{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border: #ffffff solid 1px;
+    background-color: #ff4702;
+    width: 30vh;
+    height: 5vh;
+    border-radius: 10px;
+}
+@media (max-width:400px){
+    #button_edit_code{
+        width: 20vh;
+        margin-left: 20gitvh;
+    }
+}
+#text_button_edit_code{
+    color: #ffffff;
+    font-size: 3vh;
+    margin-top: 4vh;
 }
