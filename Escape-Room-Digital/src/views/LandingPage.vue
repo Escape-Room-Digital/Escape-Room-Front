@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="container_Landing">
+  <div fluid class="container_Landing">
     <div id="container_text_welcome">
       <div id="container_first_text">
         <p id="first_text">Escape Room Digital</p>
