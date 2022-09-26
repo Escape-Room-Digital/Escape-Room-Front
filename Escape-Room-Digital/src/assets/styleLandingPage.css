@@ -252,7 +252,7 @@ img {
 }
 .text_date_instruction_form{
     color: aliceblue;
-    margin-top: 5vh;
+    margin-top: 2vh;
     font-size: 3vh;
 
 }
@@ -334,7 +334,7 @@ img {
     justify-content:center;
     align-items: center;
     background-color: #ff4702;
-    width: 30vh;
+    width: 40vh;
     height: 10vh;
     border-radius: 15px;
     margin: 3vh;
@@ -342,6 +342,7 @@ img {
 #text_title_edit_code{
     color: aliceblue;
     font-size: 3vh;
+    margin-top: 2vh;
 }
 #container_text_edit_code{
     display: flex;
@@ -417,7 +418,7 @@ img {
 #text_button_edit_code{
     color: #ffffff;
     font-size: 3vh;
-    margin-top: 4vh;
+    margin-top: 2vh;
 }
 
 /* MESSAGE LUCKY TEXT*/

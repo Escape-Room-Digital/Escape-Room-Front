@@ -169,7 +169,7 @@
         <div class="container_date_form">
           <strong>3</strong>
           <p class="text_date_instruction_form">
-            CLICK EN ENVIAR Y CULMINA LA PRUEBA
+            CLICK EN ENVIAR
           </p>
         </div>
       </div>
