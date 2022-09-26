@@ -40,6 +40,11 @@ const router = createRouter({
       name: 'landingpage',
       component: LandingPage
     },
+    {
+      path: "/:pathMatch(.*)*",
+      name: "NotFound",
+      component: () => import(""),
+  },
   ]
 })
 
