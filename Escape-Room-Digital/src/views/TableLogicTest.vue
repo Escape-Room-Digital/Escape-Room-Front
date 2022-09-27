@@ -1,25 +1,26 @@
 <script setup>
-import { useGetData } from "../services/prueba";
+//imports
+import {ref} from "vue";
+import {useLogicTestStore} from '../stores/tableLogicTestStore'
 
+const select= ref(true);
 
-
-const { getData, data, error, loading } = useGetData();
-
-getData("http://127.0.0.1:8000/api/logictest")
-
-
+const useLogicTest = useLogicTestStore();
 </script>
+    
+    
 
 
 <template>
-    
-    <p  class="" v-if="loading">Cargando información...</p>
-    <div class="alert alert-danger mt-2" v-if="error">{{ error }}</div>
-    <v-table v-if="data" elevation="10">
-        <thead class="header-list-rooms">
+
+    <div>
+        <v-btn variant="text" icon="mdi-file-plus" color="orange darken-3" @click="useLogicTest.createTestlogic"></v-btn>
+    </div>
+    <v-table fluid>
+        <thead class="header-list-rooms" elevation="10">
             <tr>
                 <th id="names">Nombre</th>
-                <th id="accions">Acciones</th>
+                <th id="actions">Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -33,8 +34,7 @@ getData("http://127.0.0.1:8000/api/logictest")
                 </th>
 
             </tr>
-
-
+                
         </tbody>
         <div class="mt-2">
             <button :disabled="!data.previous" class="btn btn-success me-2" @click="getData(data.previous)">
@@ -47,7 +47,16 @@ getData("http://127.0.0.1:8000/api/logictest")
     </v-table>
 </template>
 
+<script>
 
+export default {
+    data() {
+        return {
+            select: ['trues'],
+        }
+    },
+}
+</script>
 
 
 <style scoped>
