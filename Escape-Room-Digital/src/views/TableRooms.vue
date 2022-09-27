@@ -14,7 +14,7 @@ getData("http://127.0.0.1:8000/api/logictest")
 
 <template>
     <h1>listado escape rooms</h1>
-    <p v-if="loading">Cargando información...</p>
+    <p v-if="loading">Cargando información...</p>git 
     <div class="alert alert-danger mt-2" v-if="error">{{ error }}</div>
     <v-table v-if="data" elevation="10">
         <thead class="header-list-rooms">
@@ -28,8 +28,9 @@ getData("http://127.0.0.1:8000/api/logictest")
                 <th id="name" v-for="poke in data">{{ poke.name }} <v-btn-group>
                         <v-checkbox class="text-rigth" v-model="select" color="orange darken-3" value="trues"
                             hide-details></v-checkbox>
-                        <v-btn variant="text" icon="mdi-delete" color="orange darken-3"></v-btn>
+                        <v-btn variant="text" icon="mdi-delete" color="orange darken-3" href=""></v-btn>
                         <v-btn variant="text" icon="mdi-pencil" color="dark"></v-btn>
+                        <v-btn variant="text" icon="mdi-file-plus" color="orange darken-3"></v-btn>
                     </v-btn-group>
                 </th>
 
