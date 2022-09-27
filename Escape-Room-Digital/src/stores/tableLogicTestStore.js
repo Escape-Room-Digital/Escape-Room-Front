@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { api } from "../services/serviceLogicTest";
+// import { api } from "../services/serviceLogicTest";
 
 export const useLogicTestStore = defineStore('TableRooms', () => {
     const createTestlogic = async (name) => {

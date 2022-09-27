@@ -1,11 +1,14 @@
 <script setup>
 //imports
 import {ref} from "vue";
-import {useLogicTestStore} from '../stores/tableLogicTestStore'
+import { useGetData } from "../services/prueba";
 
+// import {useLogicTestStore} from '../stores/tableLogicTestStore'
+const { getData, data, error, loading } = useGetData();
 const select= ref(true);
 
-const useLogicTest = useLogicTestStore();
+// const useLogicTest = useLogicTestStore();
+getData("http://127.0.0.1:8000/api/logictest")
 </script>
     
     
@@ -13,9 +16,9 @@ const useLogicTest = useLogicTestStore();
 
 <template>
 
-    <div>
+    <!-- <div>
         <v-btn variant="text" icon="mdi-file-plus" color="orange darken-3" @click="useLogicTest.createTestlogic"></v-btn>
-    </div>
+    </div> -->
     <v-table fluid>
         <thead class="header-list-rooms" elevation="10">
             <tr>
@@ -47,16 +50,7 @@ const useLogicTest = useLogicTestStore();
     </v-table>
 </template>
 
-<script>
 
-export default {
-    data() {
-        return {
-            select: ['trues'],
-        }
-    },
-}
-</script>
 
 
 <style scoped>
