@@ -1,6 +1,5 @@
 <script>
 import axios from "axios";
-import { ref } from "vue";
 export default {
 data(){
     return {
@@ -87,9 +86,9 @@ formEditar(id, name, statement, question, result, clue, image){
     this.listOfLogicalTest.imagen= image;
     this.operacion = 'editar'
 }
+}
 
 
-getData("http://127.0.0.1:8000/api/logictest")
 
 
 </script>
