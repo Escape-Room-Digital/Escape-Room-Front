@@ -1,13 +1,28 @@
-// import axios from "axios";
+import axios from "axios";
+import { ref } from "vue";
 
-// const api = {method: 'GET', url: 'http://127.0.0.1:8000/api/logictest'};
+export const useGetDataLogicTest = () => {
+    const data = ref(null);
+    const error = ref(null);
+    const loading = ref(true);
 
-// axios.request(options).then(function (response) {
-//   console.log(response.data);
-// }).catch(function (error) {
-//   console.error(error);
-// }); 
+    const getDataLogic = async () => {
+        loading.value = true;
+        try {
+            const res = await axios.get("http://127.0.0.1:8000/api/logictest");
+            data.value = res.data;
+        } catch (e) {
+            // console.log(e);
+            error.value = "Error de servidor";
+        } finally {
+            loading.value = false;
+        }
+    };
 
-
-
-// export { api };
+    return {
+        getDataLogic,
+        data,
+        loading,
+        error,
+    };
+};

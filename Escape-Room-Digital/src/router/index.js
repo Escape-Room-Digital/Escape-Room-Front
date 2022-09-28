@@ -5,6 +5,7 @@ import PanelAdmin from '../views/PanelAdmin.vue'
 import LandingPage from '../views/LandingPage.vue'
 import TableRooms from '../views/TableRooms.vue'
 import TableLogicTest from '../views/TableLogicTest.vue'
+import TableCoderEditor from '../views/TableCoderEditor.vue'
 
 
 const router = createRouter({
@@ -36,6 +37,11 @@ const router = createRouter({
       component: TableLogicTest
     },
     {
+      path: '/tablecodereditor',
+      name: 'tablecodereditor',
+      component: TableCoderEditor
+    },
+    {
       path: '/landingpage',
       name: 'landingpage',
       component: LandingPage
@@ -43,7 +49,7 @@ const router = createRouter({
     {
       path: "/:pathMatch(.*)*",
       name: "NotFound",
-      component: () => import(""),
+      component: () => import("../views/NotFoundView.vue"),
   },
   ]
 })

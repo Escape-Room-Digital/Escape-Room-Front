@@ -1,14 +1,12 @@
 <script setup>
 //imports
 import {ref} from "vue";
-import { useGetData } from "../services/prueba";
-
-// import {useLogicTestStore} from '../stores/tableLogicTestStore'
-const { getData, data, error, loading } = useGetData();
+import { useGetDataLogicTest } from "../services/serviceLogicTest";
+const { getDataLogic, data, error, loading } = useGetDataLogicTest(); 
 const select= ref(true);
 
-// const useLogicTest = useLogicTestStore();
-getData("http://127.0.0.1:8000/api/logictest")
+/*  const useLogicTest = useLogicTestStore(); */
+ const listOfLogicalTest =  getDataLogic();
 </script>
     
     
@@ -16,9 +14,9 @@ getData("http://127.0.0.1:8000/api/logictest")
 
 <template>
 
-    <!-- <div>
-        <v-btn variant="text" icon="mdi-file-plus" color="orange darken-3" @click="useLogicTest.createTestlogic"></v-btn>
-    </div> -->
+    <div>
+        <v-btn variant="text" icon="mdi-file-plus" color="orange darken-3"></v-btn>
+    </div>
     <v-table fluid>
         <thead class="header-list-rooms" elevation="10">
             <tr>
@@ -39,14 +37,14 @@ getData("http://127.0.0.1:8000/api/logictest")
             </tr>
                 
         </tbody>
-        <div class="mt-2">
+        <!-- <div class="mt-2">
             <button :disabled="!data.previous" class="btn btn-success me-2" @click="getData(data.previous)">
                 Previous
             </button>
             <button :disabled="!data.next" class="btn btn-primary" @click="getData(data.next)">
                 Next
             </button>
-        </div>
+        </div> -->
     </v-table>
 </template>
 

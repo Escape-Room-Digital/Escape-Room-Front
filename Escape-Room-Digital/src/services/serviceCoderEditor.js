@@ -1,16 +1,16 @@
 import axios from "axios";
 import { ref } from "vue";
 
-export const useGetData = () => {
-    const data = ref(null);
+export const useGetDataCoderEditor = () => {
+    const data = ref(null); 
     const error = ref(null);
     const loading = ref(true);
 
-    const getData = async (url) => {
+    const getDataCoder = async () => {
         loading.value = true;
         try {
-            const res = await axios.get(url);
-            data.value = res.data;
+            const res = await axios.get("http://127.0.0.1:8000/api/codeeditor");
+            data.value = await res.data;
         } catch (e) {
             // console.log(e);
             error.value = "Error de servidor";
@@ -20,7 +20,7 @@ export const useGetData = () => {
     };
 
     return {
-        getData,
+        getDataCoder,
         data,
         loading,
         error,

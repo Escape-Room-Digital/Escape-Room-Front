@@ -19,7 +19,7 @@
 </div>
 
 <div id="container_pruebasCodigo">
-  <p  class="title_options"><strong>Pruebas de Codigo</strong></p>
+  <p  class="title_options"><strong><RouterLink to="/tablecodereditor">Prueba de Codigo</RouterLink></strong></p>
 </div>
 
 <div id="container_listadoCandidatos">
