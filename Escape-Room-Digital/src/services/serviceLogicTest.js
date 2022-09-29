@@ -1,12 +1,12 @@
 import axios from "axios";
 import { ref } from "vue";
 
-export const useGetDataLogicTest = () => {
+export const useGetData = () => {
     const data = ref(null);
     const error = ref(null);
     const loading = ref(true);
 
-    const getDataLogic = async () => {
+    const getData = async () => {
         loading.value = true;
         try {
             const res = await axios.get("http://127.0.0.1:8000/api/logictest");
@@ -20,7 +20,7 @@ export const useGetDataLogicTest = () => {
     };
 
     return {
-        getDataLogic,
+        getData,
         data,
         loading,
         error,
