@@ -1,12 +1,40 @@
 <script setup>
 //imports
 import {ref} from "vue";
-import { useGetDataLogicTest } from "../services/serviceLogicTest";
-const { getDataLogic, data, error, loading } = useGetDataLogicTest(); 
+import axios from "axios";
+ 
 const select= ref(true);
 
-/*  const useLogicTest = useLogicTestStore(); */
- const listOfLogicalTest =  getDataLogic();
+let url = "http://127.0.0.1:8000/api/logictest"
+
+ const useGetDataLogicTest = () => {
+    const json = ref(null);
+     const error = ref(null);
+     const loading = ref(true);
+
+    const getDataLogic = async () => {
+        try {
+            const res = await axios.get(url),
+            json = await res.data;
+            console.log(json);
+        } catch (e) {
+            // console.log(e);
+            error.value = "Error de servidor";
+        } finally {
+            loading.value = false;
+        }
+    };
+
+};
+
+
+useGetDataLogicTest()
+
+
+
+
+
+
 </script>
     
     
@@ -26,7 +54,7 @@ const select= ref(true);
         </thead>
         <tbody>
             <tr class="list-group">
-                <th id="name" v-for="listOfLogicalTest in data">{{listOfLogicalTest.name}} <v-btn-group>
+                <th id="name" v-for="listOfLogicalTest in json"> {{listOfLogicalTest.name}} <v-btn-group>
                         <v-checkbox class="text-rigth" v-model="select" color="orange darken-3" value="trues"
                             hide-details></v-checkbox>
                         <v-btn variant="text" icon="mdi-delete" color="orange darken-3"></v-btn>
