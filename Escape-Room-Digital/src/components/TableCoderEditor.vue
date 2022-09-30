@@ -41,23 +41,30 @@ const listOfLogicalTest = getDataCoder();
 
             <tr class="list-group" id="name" v-for="(listOfLogicalTest, id) in data" :key="id">
                 <td>{{listOfLogicalTest.name}}</td>
-                <td>{{listOfLogicalTest.statement}}</td>
-                <td>{{listOfLogicalTest.result}}</td>
-                <br>
-                <td>
-                    <v-checkbox class="text-rigth" v-model="select" color="orange darken-3" value="trues" hide-details>
-                    </v-checkbox>
-                </td>
-                <td>
-                    <button @click="deleteCode(listOfLogicalTest.id)" class="btn btn-danger">
-                    </button>
-                </td>
-                <br>
-                <td>
-                    <v-btn icon="mdi-pencil" color="dark">
-                        <router-link :to="{ name: 'codeeditoredit', params: { id: listOfLogicalTest.id }}">edit </router-link>
-                    </v-btn>
-                </td>
+                <!-- <td>{{listOfLogicalTest.statement}}</td>
+                <td>{{listOfLogicalTest.result}}</td> -->
+                <div>
+                    
+                        <v-btn    class="ma-2" color="red" dark>Seleccionar</v-btn>
+                     
+                     
+                         <v-btn icon="mdi-delete" class="delete btn btn-danger" color="orange darken-3" @click="deleteCode(listOfLogicalTest.id)"></v-btn>
+                     
+                      
+                         
+                             <router-link :to="{ name: 'codeeditoredit', params: { id: listOfLogicalTest.id }}">
+     
+                                 <v-btn  icon="mdi-pencil" color="orange darken-3" ></v-btn>
+     
+                             </router-link>
+                       
+                     
+
+
+
+
+                </div>
+            
             </tr>
 
         </tbody>
@@ -80,11 +87,18 @@ const listOfLogicalTest = getDataCoder();
   
 <style scoped>
 .header-list-rooms {
+    
     background: rgba(255, 71, 2, 0.58);
 }
 
 .table {
     border: 1px solid rgba(255, 71, 2, 0.58);
+}
+.list-group{
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-between;
+    
 }
 </style>
     
