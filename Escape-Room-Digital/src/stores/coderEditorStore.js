@@ -1,6 +1,5 @@
 import { defineStore } from "pinia";
 import axios from "axios";
-
 import { useGetDataCoderEditor} from "../services/serviceCoderEditor"
 
 export const useCodeEditorStore = defineStore('CoderEditor', (name,statement,result) => {

@@ -1,4 +1,5 @@
 import { defineStore } from "pinia";
+import axios from "axios";
 import { serviceLogicTest } from "../services/serviceLogicTest";
 
 export const useLogicTestStore = defineStore('TableRooms', () => {

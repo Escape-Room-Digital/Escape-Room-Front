@@ -68,7 +68,7 @@ a {
 }
 
 .text{
-    color:#FF4702;
+    color:aliceblue;
     text-decoration: none;
     margin: auto;
     text-align: center;
