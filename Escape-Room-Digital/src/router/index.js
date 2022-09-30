@@ -4,8 +4,11 @@ import LoginMember from '../views/LoginMember.vue'
 import PanelAdmin from '../views/PanelAdmin.vue'
 import LandingPage from '../views/LandingPage.vue'
 import TableRooms from '../views/TableRooms.vue'
-import TableLogicTest from '../views/TableLogicTest.vue'
-import TableCoderEditor from '../views/TableCoderEditor.vue'
+import TableLogicTest from '../components/TableLogicTest.vue'
+import TableCoderEditor from '../components/TableCoderEditor.vue'
+import CodeEditorEdit from '../views/CodeEditorEdit.vue'
+import CodeEditorCreate from '../views/CodeEditorCreate.vue'
+import LogicTestCreate from '../views/LogicTestCreate.vue'
 
 
 const router = createRouter({
@@ -41,6 +44,22 @@ const router = createRouter({
       name: 'tablecodereditor',
       component: TableCoderEditor
     },
+    {
+      path: '/codeeditorcreate',
+      name: 'codeeditorcreate',
+      component: CodeEditorCreate
+    },
+    {
+      path: '/logictestcreate',
+      name: 'logictestcreate',
+      component: LogicTestCreate
+    },
+    {
+      path: "/codeeditoredit",
+      name: "codeeditoredit",
+      component: CodeEditorEdit,
+      props: true
+  },
     {
       path: '/landingpage',
       name: 'landingpage',

@@ -14,7 +14,7 @@ const drawer = null
    <Header/>
      
     
-    <v-main fluid app>
+    <v-main >
       <v-container>
         <RouterView/>
       </v-container>

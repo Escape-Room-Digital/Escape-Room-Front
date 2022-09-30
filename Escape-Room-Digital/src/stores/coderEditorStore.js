@@ -1,16 +1,3 @@
-
-//EndPoint
-
-
-
-
-
-// end point de usuario
-
-//base url: http://localhost
-
-
-
 import { defineStore } from "pinia";
 import axios from "axios";
 
@@ -22,7 +9,7 @@ export const useCodeEditorStore = defineStore('CoderEditor', (name,statement,res
         try {
             let options = {
                 method: "POST",
-                url: "http://localhost:8000/api/codeeditor/store/",
+               /*  url: "http://localhost:8000/api/codeeditor/store/", */
                 headers: {
                     "Content-type": "application/json"
                 },
