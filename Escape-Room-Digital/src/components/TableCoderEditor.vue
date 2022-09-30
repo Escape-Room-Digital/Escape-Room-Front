@@ -26,9 +26,17 @@ const listOfLogicalTest = getDataCoder();
 <template>
 
     <div>
-        <v-btn variant="text" icon="mdi-file-plus" color="orange darken-3">
-            <RouterLink to="/codeeditorcreate"><a class="text-link">create</a></RouterLink>
-        </v-btn>
+      
+            <RouterLink to="/codeeditorcreate">
+                <div id="button_create">
+                    <v-btn variant="text" icon="mdi-plus-thick" color="blue darken-3" class="mt-2"></v-btn>
+                    <p id="text_create">Crear Escape Room</p>  
+                </div>
+                
+           
+            
+            </RouterLink>
+     
     </div>
     <v-table fluid>
         <thead class="header-list-rooms" elevation="10">
@@ -90,6 +98,11 @@ const listOfLogicalTest = getDataCoder();
     
     background: rgba(255, 71, 2, 0.58);
 }
+tr{
+    width:80vw;
+    
+    
+}
 
 .table {
     border: 1px solid rgba(255, 71, 2, 0.58);
@@ -99,6 +112,14 @@ const listOfLogicalTest = getDataCoder();
     flex-direction:row ;
     justify-content: space-between;
     
+}
+#button_create{
+    display: flex;
+}
+#text_create{
+    margin-top: 2vh;
+    color: black;
+    font-size: 2vh;
 }
 </style>
     
