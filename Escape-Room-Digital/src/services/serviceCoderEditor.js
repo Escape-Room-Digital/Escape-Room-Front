@@ -23,7 +23,7 @@ export const useGetDataCoderEditor = () => {
     }
 
     const getcoder = async (id) => {
-        let response = await http.get(`http://127.0.0.1:8000/api/codeeditor/show/${id}`);
+        let response = await http.get(`http://127.0.0.1:8000/api/codeeditor/${id}`);
         data.value = response.data
     }
 
