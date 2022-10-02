@@ -1,8 +1,8 @@
 <template>
- <div class="container">
+  <div class="container">
     <div class="container_orange">
       <div class="container_white">
-        <h2>CREAR PRUEBA DE LÓGICA</h2>
+        <h2>EDITAR PRUEBA DE LÓGICA</h2>
         <form @submit.prevent="saveLogic">
           <div class="form-group">
             <label for="name" id="label">Nombre</label>
@@ -11,8 +11,7 @@
               name="title"
               id="title"
               class="form-control"
-              v-model="form.name"
-              required
+              v-model="listOfLogicalTest"              required
             />
           </div>
 
@@ -23,7 +22,7 @@
               name="director"
               id="director"
               class="form-control"
-              v-model="form.statement"
+              v-model="form"
               required
             />
           </div>
@@ -34,7 +33,7 @@
               name="director"
               id="director"
               class="form-control"
-              v-model="form.question"
+              v-model="form"
               required
             />
           </div>
@@ -45,7 +44,7 @@
               name="director"
               id="director"
               class="form-control"
-              v-model="form.result"
+              v-model="form"
               required
             />
           </div>
@@ -57,7 +56,7 @@
               name="clue"
               id="director"
               class="form-control"
-              v-model="form.clue"
+              v-model="form"
               required
             />
           </div>
@@ -68,53 +67,55 @@
               name="image"
               id="director"
               class="form-control"
-              v-model="form.image"
+              v-model="form"
               required
             />
           </div>
           <br />
         </form>
       </div>
-      <div id="button_back">
-        <RouterLink :to="{ name: 'tablelogictest' }" class="btn btn-dark">
-          <p id="text_back">BACK</p>
-        </RouterLink>
-      </div>
-   
+      <RouterLink :to="{ name: 'tablelogictest' }" class="btn btn-dark">
+        <p id="text_back">BACK</p>
+      </RouterLink>
       <div class="">
-        <button type="submit" class="btn btn-dark"><p id="text_enviar">Enviar</p></button>
+        <button type="submit" class="btn btn-dark">
+          <p id="text_enviar">Enviar</p>
+        </button>
       </div>
     </div>
   </div>
 </template>
-
 <script>
 import { useGetDataLogicTest } from "../services/serviceLogicTest";
-import { reactive } from "vue";
+import { onMounted } from "vue";
+import { data } from "browserslist";
 
 export default {
-  setup() {
-    const form = reactive({
-      name: "",
-      statement: "",
-      question: "",
-      result: "",
-      clue: "",
-      image: "",
-    });
+  props:{
+    id:{
+      required: true,
+      type: String,
+    },
+  },
+  setup(props) {
+    const { errors, data, getlogic, updateLogic } = useGetDataLogicTest();
 
-    const { errors, storeLogic } = useGetDataLogicTest();
+    onMounted(() => getlogic(props.id));
 
     const saveLogic = async () => {
-      await storeLogic({ ...form });
+      await updateLogic(props.id);
     };
 
     return {
-      form,
       errors,
+      data,
       saveLogic,
     };
   },
+
+
+
+
 };
 </script>
 <style scoped>
@@ -134,9 +135,9 @@ export default {
   margin: 2vh;
   border-radius: 8px;
 }
-H2{
-    display: flex;
-    justify-content: center;;
+H2 {
+  display: flex;
+  justify-content: center;
 }
 .container_orange {
   display: flex;
@@ -166,11 +167,7 @@ H2{
 .form-group {
   margin: 1vh;
 }
-#text_back{
-    color: #ff4702;
+#text_back {
+  color: #ff4702;
 }
-#button_back{
-  margin-bottom: 1vh;
-}
-
 </style>

@@ -6,7 +6,7 @@
     
     
     
-    const { getDataLogic, data, errors, loading } = useGetDataLogicTest();
+    const { getDataLogic, data, errors, loading,destroyLogic } = useGetDataLogicTest();
     const select = ref(true);
     const deletes = ref(true);
 
@@ -70,7 +70,7 @@
                      
                       
                          
-                             <router-link :to="{ name: 'codeeditoredit', params: { id: listOfLogicalTest.id }}">
+                             <router-link :to="{ name: 'logictestedit', params: { id: listOfLogicalTest.id }}">
      
                                  <v-btn  icon="mdi-pencil" color="darken-3" ></v-btn>
                                 

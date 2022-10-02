@@ -79,7 +79,7 @@
               <br />
             </form>
           </div>
-          <div id="routerlink_back">
+          <div id="button_back">
             <RouterLink :to="{ name: 'tablecodereditor' }" class="btn btn-dark">
                 <p id="text_back">BACK</p>
               </RouterLink>
@@ -171,5 +171,9 @@ export default {
     #text_back{
         color: #ff4702;
     }
+    #button_back{
+      margin-bottom: 1vh;
+    }
+    
 
     </style>

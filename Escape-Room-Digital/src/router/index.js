@@ -8,6 +8,7 @@ import TableLogicTest from '../components/TableLogicTest.vue'
 import TableCoderEditor from '../components/TableCoderEditor.vue'
 import CodeEditorEdit from '../views/CodeEditorEdit.vue'
 import CodeEditorCreate from '../views/CodeEditorCreate.vue'
+import LogicTestEdit from '../views/LogicTestEdit.vue'
 import LogicTestCreate from '../views/LogicTestCreate.vue'
 
 
@@ -45,6 +46,11 @@ const router = createRouter({
       component: TableCoderEditor
     },
     {
+      path: "/tablelistcandidate",
+      name: "tablelistcandidate",
+      component: () => import("../components/TableListCandidate.vue"),
+  },
+    {
       path: '/codeeditorcreate',
       name: 'codeeditorcreate',
       component: CodeEditorCreate
@@ -60,6 +66,14 @@ const router = createRouter({
       component: CodeEditorEdit,
       props: true
   },
+  {
+    path: "/logictestedit",
+    name: "logictestedit",
+    component: LogicTestEdit,
+    props: true
+},
+
+  
     {
       path: '/landingpage',
       name: 'landingpage',
