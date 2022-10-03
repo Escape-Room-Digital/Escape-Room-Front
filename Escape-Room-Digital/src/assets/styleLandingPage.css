@@ -176,7 +176,7 @@ img {
 
 #container_title_statement {
     display: flex;
-    justify-content: flex-start;
+    justify-content:center;
     align-items: center;
     
     width: 60vh;
@@ -218,7 +218,10 @@ img {
     text-align: center;
     margin: 5vh;
 }
-
+#container_image_test{
+    display: flex;
+    justify-content: center;
+}
 #container_question_statament {
     display: flex;
     align-items: center;
