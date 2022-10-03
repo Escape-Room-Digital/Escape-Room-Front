@@ -7,7 +7,7 @@
 
 <template>
     <div class="container_game">
-        <h1>nhjchcdh</h1>
+        <h1>fff</h1>
         
     </div>
 </template>

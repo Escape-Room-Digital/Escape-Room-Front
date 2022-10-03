@@ -10,6 +10,7 @@ import CodeEditorEdit from '../views/CodeEditorEdit.vue'
 import CodeEditorCreate from '../views/CodeEditorCreate.vue'
 import LogicTestEdit from '../views/LogicTestEdit.vue'
 import LogicTestCreate from '../views/LogicTestCreate.vue'
+import EscapeRoomGame from '../views/EscapeRoomGame.vue'
 
 
 const router = createRouter({
@@ -49,12 +50,7 @@ const router = createRouter({
       path: "/tablelistcandidate",
       name: "tablelistcandidate",
       component: () => import("../components/TableListCandidate.vue"),
-  },
-  {
-    path: "/game",
-    name: "game",
-    component: () => import("../components/Game.vue"),
-},
+    },
     {
       path: '/codeeditorcreate',
       name: 'codeeditorcreate',
@@ -70,25 +66,28 @@ const router = createRouter({
       name: "codeeditoredit",
       component: CodeEditorEdit,
       props: true
-  },
-  {
-    path: "/logictestedit",
-    name: "logictestedit",
-    component: LogicTestEdit,
-    props: true
-},
-
-  
+    },
+    {
+      path: "/logictestedit",
+      name: "logictestedit",
+      component: LogicTestEdit,
+      props: true
+    },
     {
       path: '/landingpage',
       name: 'landingpage',
       component: LandingPage
     },
     {
+      path: '/escaperoomgame',
+      name: 'escaperoomgame',
+      component: EscapeRoomGame
+    },
+    {
       path: "/:pathMatch(.*)*",
       name: "NotFound",
       component: () => import("../views/NotFoundView.vue"),
-  },
+    },
   ]
 })
 

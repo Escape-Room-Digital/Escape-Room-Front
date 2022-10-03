@@ -2,7 +2,7 @@
 //imports
 import { ref } from "vue";
 import { useGetDataCoderEditor } from "../services/serviceCoderEditor";
-import { onMounted } from "vue";
+
 
 
 const { getDataCoder, data, errors, loading, destroyCoder } = useGetDataCoderEditor();

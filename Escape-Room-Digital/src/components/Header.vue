@@ -26,7 +26,7 @@
       <RouterLink to="/loginmember"><a class="text-link">Login Admin</a></RouterLink>
     </v-btn>
     <v-btn>
-      <RouterLink to="/game"><a class="text-link">Login Candidato</a></RouterLink>
+      <RouterLink to="/escaperoomgame"><a class="text-link">Login Candidato</a></RouterLink>
     </v-btn>
     
     
