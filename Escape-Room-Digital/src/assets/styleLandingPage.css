@@ -9,6 +9,7 @@
 
 }
 strong {
+    color:aliceblue ;
     font-size: 5vh;
     margin: 2vh;
 }
@@ -177,7 +178,7 @@ img {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: lightslategrey;
+    
     width: 60vh;
     height: 6vh;
     border-radius: 15px;
@@ -202,7 +203,7 @@ img {
 #container_text_statament {
     display: flex;
     align-items: center;
-    background-color: lightslategrey;
+
     margin: 9vh;
     border-radius: 10px;
 }
@@ -221,7 +222,7 @@ img {
 #container_question_statament {
     display: flex;
     align-items: center;
-    background-color: lightslategrey;
+    
     margin: 5vh;
     border-radius: 10px;
 }
