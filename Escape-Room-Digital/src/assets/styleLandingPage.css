@@ -285,8 +285,8 @@ img {
 }
 #container_group_buttons_form {
     display: flex;
-    justify-content: center;
-    justify-content:;
+    justify-content:space-around;
+    
     margin-top: 3vh;
 
 }
