@@ -23,8 +23,12 @@
     </v-btn>
 
     <v-btn>
-      <RouterLink to="/loginmember"><a class="text-link">Login</a></RouterLink>
+      <RouterLink to="/loginmember"><a class="text-link">Login Admin</a></RouterLink>
     </v-btn>
+    <v-btn>
+      <RouterLink to="/game"><a class="text-link">Login Candidato</a></RouterLink>
+    </v-btn>
+    
     
   </v-app-bar>
   <v-sheet id="scrolling-techniques-2" class="overflow-y-auto" max-height="600">

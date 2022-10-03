@@ -50,6 +50,11 @@ const router = createRouter({
       name: "tablelistcandidate",
       component: () => import("../components/TableListCandidate.vue"),
   },
+  {
+    path: "/game",
+    name: "game",
+    component: () => import("../components/Game.vue"),
+},
     {
       path: '/codeeditorcreate',
       name: 'codeeditorcreate',
