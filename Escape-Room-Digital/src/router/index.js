@@ -52,6 +52,11 @@ const router = createRouter({
       component: () => import("../components/TableListCandidate.vue"),
     },
     {
+      path: "/templateforms",
+      name: "templateforms",
+      component: () => import("../views/TemplateForms.vue"),
+    },
+    {
       path: '/codeeditorcreate',
       name: 'codeeditorcreate',
       component: CodeEditorCreate

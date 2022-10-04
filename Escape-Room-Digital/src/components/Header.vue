@@ -25,8 +25,14 @@
     <v-btn>
       <RouterLink to="/loginmember"><a class="text-link">Login Admin</a></RouterLink>
     </v-btn>
+
     <v-btn>
       <RouterLink to="/escaperoomgame"><a class="text-link">Login Candidato</a></RouterLink>
+    </v-btn>
+
+        
+    <v-btn>
+      <RouterLink to="/templateforms"><a class="text-link">Template/Form</a></RouterLink>
     </v-btn>
     
     
