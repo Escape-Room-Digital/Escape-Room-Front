@@ -22,14 +22,14 @@ export const useGetDataEscapeRoom = () => {
             loading.value = false;
         }
     }
-    const getlogic = async (id) => {
+    const getescaperoom = async (id) => {
         let response = await http.get(`http://127.0.0.1:8000/api/escaperoom/${id}`);
         data.value = response.data
     }
     
     return {
         getDataLogic,
-        getlogic,
+        getescaperoom,
         data,
         loading,
         errors,

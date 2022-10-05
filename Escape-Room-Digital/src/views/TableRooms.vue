@@ -6,10 +6,44 @@ import { useRouter, useRoute } from "vue-router";
 const switch1 = ref(true);
 const route = useRoute();
 const router = useRouter();
+
+// const getescaperoom = async (id) => {
+//         const response = await http.get(`http://127.0.0.1:8000/api/escaperoom/${id}`);
+//         data.value = response.data
+//         return getescaperoom;
+//     }
+
+
 const togglePushId = () => { 
+
     router.push("/tablelogictest");
+    
 };
 
+
+
+const hola = (getDataLogic,id) =>{
+
+    const findId = (id) => getDataLogic.value.find((item)=>item.id == id);
+
+    const add = (listOfLogicalTest) =>{
+      
+        getDataLogic.value.push(listOfLogicalTest);
+    
+}
+console.log(getDataLogic,id)
+return {
+    findId,
+    add,
+    id,
+    // getescaperoom,
+    
+}
+
+    
+    
+
+}
 const { getDataLogic, data, errors, loading, destroyLogic } =
   useGetDataEscapeRoom();
 const select = ref(true);
@@ -29,7 +63,7 @@ const listOfLogicalTest = getDataLogic();
   <h1>listado escape rooms</h1>
 
   <div>
-    <RouterLink to="/codeeditorcreate">
+    <RouterLink to="/escaperoomcreate">
       <div id="button_create">
         <!-- <v-btn variant="text" icon="mdi-plus-thick" color="blue darken-3" class="mt-2"></v-btn> -->
 
@@ -49,13 +83,13 @@ const listOfLogicalTest = getDataLogic();
         class="list-group"
         id="name"
         v-for="(listOfLogicalTest, id) in data"
-        :key="id"
+        
       >
         <td>{{ listOfLogicalTest.name }}</td>
         <!-- <td>{{listOfLogicalTest.statement}}</td>
             <td>{{listOfLogicalTest.result}}</td> -->
         <div>
-          <v-btn class="ma-2" color="orange" @click="togglePushId">Seleccionar</v-btn>
+          <v-btn class="ma-2" color="orange" @click="togglePushId();hola(id);">Seleccionar</v-btn>
 
           <v-btn
             icon="mdi-alpha-x"

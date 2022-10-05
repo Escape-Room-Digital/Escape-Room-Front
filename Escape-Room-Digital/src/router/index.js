@@ -67,6 +67,11 @@ const router = createRouter({
       component: LogicTestCreate
     },
     {
+      path: "/escaperoomcreate",
+      name: "escaperoomcreate",
+      component: () => import("../views/EscapeRoomCreate.vue"),
+    },
+    {
       path: "/codeeditoredit",
       name: "codeeditoredit",
       component: CodeEditorEdit,
