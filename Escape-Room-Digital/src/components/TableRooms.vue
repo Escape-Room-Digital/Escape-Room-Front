@@ -8,6 +8,8 @@ const route = useRoute();
 const router = useRouter();
 
 const { getDataEscapeRoom, data, errors, loading, deleteEscapeRoom } = useGetDataEscapeRoom();
+
+
 const togglePushId = () => {
   router.push("/tablelogictest");
 };
@@ -20,10 +22,10 @@ const togglePushId = () => {
   await getDataEscapeRoom();
 }; 
 
-const selection = async (id) => {
+/* const selection = async (id) => {
     data.value = data.value.filter((item) => item.id !== id);
     console.log(id);
-}
+} */
 
 
 
@@ -47,7 +49,7 @@ const deletes = ref(true);
 
 
 
-const listOfLogicalTest = getDataEscapeRoom();
+const listOfEscapeRoom = getDataEscapeRoom();
 /* console.log(listOfLogicalTest); */
 </script>
 
@@ -69,25 +71,18 @@ const listOfLogicalTest = getDataEscapeRoom();
       </tr>
     </thead>
     <tbody>
-      <tr class="list-group" id="name" v-for="(listOfLogicalTest, id) in data" :key="id">
-        <td>{{ listOfLogicalTest.name }}</td>
+      <tr class="list-group" id="name" v-for="(listOfEscapeRoom, id) in data" :key="id">
+        <td>{{ listOfEscapeRoom.name }}</td>
         <!-- <td>{{listOfLogicalTest.statement}}</td>
             <td>{{listOfLogicalTest.result}}</td> -->
         <div>
           <v-btn class="ma-2" color="orange" @click="
             togglePushId();
-            catchIdEscapeRoom(listOfLogicalTest.id);
+            catchIdEscapeRoom(listOfEscapeRoom.id);
           ">Seleccionar</v-btn>
-
-          <v-btn icon="mdi-alpha-x" class="delete btn btn-danger" color="red" @click="removeEscapeRoom(id)">
+          <v-btn icon="mdi-alpha-x" class="delete btn btn-danger" color="red" @click="removeEscapeRoom(listOfEscapeRoom.id)">
           </v-btn>
 
-          <router-link :to="{
-            name: 'codeeditoredit',
-            params: { id: listOfLogicalTest.id },
-          }">
-            <v-btn icon="mdi-pencil" color="darken-3"></v-btn>
-          </router-link>
         </div>
       </tr>
     </tbody>

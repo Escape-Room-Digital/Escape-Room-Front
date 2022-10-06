@@ -43,7 +43,8 @@ export const useGetDataEscapeRoom = () => {
 
 
     const deleteEscapeRoom = async (id) => {
-        let response = await axios.delete(`http://127.0.0.1:8000/api/escaperoom/delete/${id}`);
+        let res = await axios.delete(`http://127.0.0.1:8000/api/escaperoom/delete/${id}`, data);
+        return deleteEscapeRoom
     }
     
     return {
