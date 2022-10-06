@@ -17,12 +17,14 @@ Es una aplicación de Escape Rooms especialmente diseñada para la integracion d
 
 [Documentation](https://escaperoom.atlassian.net/jira/software/projects/ER/boards/1)
 
+https://drive.google.com/file/d/1c8TI5sJGP3O-mZiFxq9QQvtN1U1IW7G4/view?usp=sharing
+
 
 ## Used By
 
 This project is used by the following companies:
 
-- Facoria F5
+- Factoria F5
 
 
 
