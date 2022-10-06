@@ -9,14 +9,6 @@ const catchIdLogicTest = (getDataLogic) => {
     getDataLogic.value.push(getDataLogic);
   };
 
-
-
-
-
-
-
-  
-
   console.log(getDataLogic);
   return {
     catchIdLogicTest,
