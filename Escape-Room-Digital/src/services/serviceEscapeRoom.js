@@ -10,7 +10,7 @@ export const useGetDataEscapeRoom = () => {
     const router = useRouter();
     
 
-    const getDataLogic = async () => {
+    const getDataEscapeRoom = async () => {
         loading.value = true;
         try {
             const res = await axios.get("http://127.0.0.1:8000/api/escaperoom");
@@ -28,7 +28,7 @@ export const useGetDataEscapeRoom = () => {
     }
     
     return {
-        getDataLogic,
+        getDataEscapeRoom,
         getescaperoom,
         data,
         loading,

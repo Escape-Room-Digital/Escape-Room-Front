@@ -7,44 +7,25 @@ const switch1 = ref(true);
 const route = useRoute();
 const router = useRouter();
 
-// const getescaperoom = async (id) => {
-//         const response = await http.get(`http://127.0.0.1:8000/api/escaperoom/${id}`);
-//         data.value = response.data
-//         return getescaperoom;
-//     }
-
-
-const togglePushId = () => { 
-
-    router.push("/tablelogictest");
-    
+const togglePushId = () => {
+  router.push("/tablelogictest");
 };
 
+const catchIdEscapeRoom = (getDataEscapeRoom) => {
+  //   const findId = (id) => getDataLogic.value.find((item) => item.id === id);
 
-
-const hola = (getDataLogic,id) =>{
-
-    const findId = (id) => getDataLogic.value.find((item)=>item.id == id);
-
-    const add = (listOfLogicalTest) =>{
-      
-        getDataLogic.value.push(listOfLogicalTest);
-    
-}
-console.log(getDataLogic,id)
-return {
-    findId,
+  const add = (getDataEscapeRoom) => {
+    getDataEscapeRoom.value.push(getDataEscapeRoom);
+  };
+  console.log(getDataEscapeRoom);
+  return {
+    catchIdEscapeRoom,
+    // findId,
     add,
-    id,
-    // getescaperoom,
-    
-}
-
-    
-    
-
-}
-const { getDataLogic, data, errors, loading, destroyLogic } =
+    getDataEscapeRoom,
+  };
+};
+const { getDataEscapeRoom, data, errors, loading, destroyLogic } =
   useGetDataEscapeRoom();
 const select = ref(true);
 const deletes = ref(true);
@@ -56,7 +37,7 @@ const deleteCode = async (id) => {
   await destroyLogic(id);
   await getDataLogic();
 };
-const listOfLogicalTest = getDataLogic();
+const listOfLogicalTest = getDataEscapeRoom();
 </script>
 
 <template>
@@ -83,13 +64,21 @@ const listOfLogicalTest = getDataLogic();
         class="list-group"
         id="name"
         v-for="(listOfLogicalTest, id) in data"
-        
+        :key="id"
       >
         <td>{{ listOfLogicalTest.name }}</td>
         <!-- <td>{{listOfLogicalTest.statement}}</td>
             <td>{{listOfLogicalTest.result}}</td> -->
         <div>
-          <v-btn class="ma-2" color="orange" @click="togglePushId();hola(id);">Seleccionar</v-btn>
+          <v-btn
+            class="ma-2"
+            color="orange"
+            @click="
+              togglePushId();
+              catchIdEscapeRoom(listOfLogicalTest.id);
+            "
+            >Seleccionar</v-btn
+          >
 
           <v-btn
             icon="mdi-alpha-x"
