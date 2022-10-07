@@ -10,22 +10,30 @@ const router = useRouter();
 const { getDataEscapeRoom, data, errors, loading, deleteEscapeRoom } = useGetDataEscapeRoom();
 
 
+
+/* const addArray = ref([]); */
+
+
 const togglePushId = () => {
   router.push("/tablelogictest");
 };
 
  const removeEscapeRoom = async (id) => {
-  if (!window.confirm("You sure?")) {
+/*   if (!window.confirm("You sure?")) {
     return;
-  }
+  } */
   await deleteEscapeRoom(id);
   await getDataEscapeRoom();
 }; 
 
-/* const selection = async (id) => {
-    data.value = data.value.filter((item) => item.id !== id);
-    console.log(id);
-} */
+/*  const selection = async (id) => {
+  data.value = data.value.filter((item) => item.id !== id);
+  
+    return id;
+}  */
+
+
+
 
 
 
@@ -82,7 +90,7 @@ const listOfEscapeRoom = getDataEscapeRoom();
           ">Seleccionar</v-btn>
           <v-btn icon="mdi-alpha-x" class="delete btn btn-danger" color="red" @click="removeEscapeRoom(listOfEscapeRoom.id)">
           </v-btn>
-
+          <v-btn color="blue" @click="selection1(listOfEscapeRoom.id)">habilitar</v-btn>
         </div>
       </tr>
     </tbody>
