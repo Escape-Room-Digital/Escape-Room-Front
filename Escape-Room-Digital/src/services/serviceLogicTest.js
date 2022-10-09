@@ -29,28 +29,19 @@ export const useGetDataLogicTest = () => {
     const storeLogic = async (data) => {
         errors.value = []
         try {
-            let options = {
-                data: JSON.stringify({
-                    name: "",
-                    statement: "",
-                    question: "",
-                    result: "",
-                    clue: "",
-                    image: "",
-                }),
-            }
-            await axios.post('http://127.0.0.1:8000/api/logictest/store/', options, data)
+            await axios.post('http://127.0.0.1:8000/api/logictest/store/', data)
             await router.push({ name: 'tablelogictest' })
         } catch (e) {
             if (e.response.status === 400) { //Bad request, for validation in .net core
-                
+
                 for (const key in e.response.data.errors) {
-                    errors.value.push(e.response.data.errors[key][0]) ;
+                    errors.value.push(e.response.data.errors[key][0]);
                 }
             }
         }
 
     }
+
     const updateLogic = async (id) => {
         errors.value = [];
         try {

@@ -48,7 +48,7 @@ export const useGetDataCoderEditor = () => {
         errors.value = [];
         try {
             // http method must be put for match patch method in .net core api
-            await axios.patch(`http://127.0.0.1:8000/api/codeeditor/update/${id}`, data.value)
+            await axios.put(`http://127.0.0.1:8000/api/codeeditor/update/${id}`, data.value)
             await router.push({ name: 'tablecodereditor' })
         } catch (e) {
             if (e.response.status === 400) { //Bad request, for validation

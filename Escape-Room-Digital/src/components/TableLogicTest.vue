@@ -2,9 +2,9 @@
 //imports
 import { ref } from "vue";
 import { useGetDataLogicTest } from "../services/serviceLogicTest";
-import { onMounted } from "vue";
 
-const catchIdLogicTest = (getDataLogic) => {
+
+/* const catchIdLogicTest = (getDataLogic) => {
   const add = (getDataLogic) => {
     getDataLogic.value.push(getDataLogic);
   };
@@ -15,7 +15,7 @@ const catchIdLogicTest = (getDataLogic) => {
     add,
     getDataLogic,
   };
-};
+}; */
 
 const { getDataLogic, data, errors, loading, destroyLogic } =
   useGetDataLogicTest();
@@ -52,36 +52,20 @@ const listOfLogicalTest = getDataLogic();
       </tr>
     </thead>
     <tbody>
-      <tr
-        class="list-group"
-        id="name"
-        v-for="(listOfLogicalTest, id) in data"
-        :key="id"
-      >
+      <tr class="list-group" id="name" v-for="(listOfLogicalTest, id) in data" :key="id">
         <td>{{ listOfLogicalTest.name }}</td>
         <!-- <td>{{listOfLogicalTest.statement}}</td>
                 <td>{{listOfLogicalTest.result}}</td> -->
         <div>
-          <v-btn
-            class="ma-2"
-            color="orange"
-            @click="catchIdLogicTest(listOfLogicalTest.id)"
-            >Seleccionar</v-btn
-          >
+          <v-btn class="ma-2" color="orange" @click="catchIdLogicTest(listOfLogicalTest.id)">Seleccionar</v-btn>
 
-          <v-btn
-            icon="mdi-alpha-x"
-            class="delete btn btn-danger"
-            color="red"
-            @click="deleteCode(listOfLogicalTest.id)"
-          ></v-btn>
+          <v-btn icon="mdi-alpha-x" class="delete btn btn-danger" color="red" @click="deleteCode(listOfLogicalTest.id)">
+          </v-btn>
 
-          <router-link
-            :to="{
-              name: 'logictestedit',
-              params: { id: listOfLogicalTest.id },
-            }"
-          >
+          <router-link :to="{
+            name: 'logictestedit',
+            params: { id: listOfLogicalTest.id },
+          }">
             <v-btn icon="mdi-pencil" color="darken-3"></v-btn>
           </router-link>
         </div>
@@ -110,20 +94,25 @@ const listOfLogicalTest = getDataLogic();
 .table {
   border: 1px solid rgba(255, 71, 2, 0.58);
 }
+
 tr {
   width: 80vw;
 }
+
 svg {
   margin-top: 1vh;
 }
+
 .list-group {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 #button_create {
   display: flex;
 }
+
 #text_create {
   margin-top: 2vh;
   color: black;

@@ -36,14 +36,12 @@ export default {
           <input type="text" name="name" id="name" class="form-control" v-model="form.name" required />
         </div>
 
-        
-          <button type="submit" class="btn btn-dark">
-            enviar
-          </button>
-      
-
+        <button type="submit" class="btn btn-dark">
+          enviar
+        </button>
 
       </form>
+
       <div id="container_buttons_create">
         <div id="button_back">
           <RouterLink :to="{ name: 'tablerooms' }" class="btn btn-dark">

@@ -3,41 +3,19 @@
 import { ref } from "vue";
 import { useGetDataEscapeRoom } from "../services/serviceEscapeRoom";
 import { useRouter, useRoute } from "vue-router";
-
 const route = useRoute();
 const router = useRouter();
-
 const { getDataEscapeRoom, data, errors, loading, deleteEscapeRoom } = useGetDataEscapeRoom();
 
-
-
-/* const addArray = ref([]); */
-
-
-const togglePushId = () => {
-  router.push("/tablelogictest");
-};
+const listOfEscapeRoom = getDataEscapeRoom();
 
  const removeEscapeRoom = async (id) => {
-/*   if (!window.confirm("You sure?")) {
-    return;
-  } */
   await deleteEscapeRoom(id);
   await getDataEscapeRoom();
 }; 
 
-/*  const selection = async (id) => {
-  data.value = data.value.filter((item) => item.id !== id);
-  
-    return id;
-}  */
 
-
-
-
-
-
-const catchIdEscapeRoom = (getDataEscapeRoom) => {
+/* const catchIdEscapeRoom = (getDataEscapeRoom) => {
   const add = (getDataEscapeRoom) => {
     getDataEscapeRoom.value.push(getDataEscapeRoom);
   };
@@ -47,18 +25,20 @@ const catchIdEscapeRoom = (getDataEscapeRoom) => {
     add,
     getDataEscapeRoom,
   };
-};
+}; */
 
 
 
 const select = ref(true);
-const deletes = ref(true);
 
 
 
 
-const listOfEscapeRoom = getDataEscapeRoom();
-/* console.log(listOfLogicalTest); */
+
+
+const togglePushId = () => {
+  router.push("/tablelogictest");
+};
 </script>
 
 <template>

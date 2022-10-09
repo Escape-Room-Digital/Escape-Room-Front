@@ -28,6 +28,9 @@
 <div id="container_listadoCandidatosPruebaCompletada">
   <p  class="title_options"><strong><RouterLink to="/game">GAME</RouterLink></strong></p>
 </div>
+<div id="container_listadoCandidatosPruebaCompletada">
+  <p  class="title_options"><strong><RouterLink to="/post">post</RouterLink></strong></p>
+</div>
  </div>  
   </div>
 

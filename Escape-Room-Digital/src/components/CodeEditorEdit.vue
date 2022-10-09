@@ -1,3 +1,35 @@
+<script>
+import { useGetDataCoderEditor } from "../services/serviceCoderEditor";
+import { onMounted } from "vue";
+
+
+export default {
+  props: {
+    id: {
+      required: true,
+      type: String,
+    },
+  },
+  setup(props) {
+    const { errors, data, getcoder, updateCoder } = useGetDataCoderEditor();
+
+    onMounted(() => getcoder(props.id));
+
+    const saveCode = async () => {
+      await updateCoder(props.id);
+    };
+
+    return {
+      errors,
+      data,
+      saveCode,
+    };
+  },
+};
+</script>
+
+
+
 <template>
 <div class="container">
     <div class="container_orange">
@@ -55,35 +87,7 @@
   </div>
 </template>
 
-<script>
-import { useGetDataCoderEditor } from "../services/serviceCoderEditor";
-import { onMounted } from "vue";
-import { data } from "browserslist";
 
-export default {
-  props: {
-    id: {
-      required: true,
-      type: String,
-    },
-  },
-  setup(props) {
-    const { errors, data, getcoder, updateCoder } = useGetDataCoderEditor();
-
-    onMounted(() => getcoder(props.id));
-
-    const saveCode = async () => {
-      await updateCoder(props.id);
-    };
-
-    return {
-      errors,
-      data,
-      saveCode,
-    };
-  },
-};
-</script>
 <style scoped>
 .container {
   display: flex;
