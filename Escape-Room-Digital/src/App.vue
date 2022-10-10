@@ -40,6 +40,12 @@ const drawer = null
 </template>
 
 <style scoped>
+
+  main{
+    background-image: url("/Users/David/ProyectosF5David/Escape-Room/Escape-Room-Digital/src/assets/image/background.png");
+    background-size: 1500px
+    
+  }
 .container_footer {
   background-color: #ff4702;
 }
