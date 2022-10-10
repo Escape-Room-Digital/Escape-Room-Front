@@ -204,6 +204,7 @@ export default {};
 </template>
 <style scoped>
 /*CSS FORM*/
+
 .container_all {
   display: flex;
   justify-content: center;
@@ -275,15 +276,17 @@ H2 {
 #text_dialogpasstest {
   color: aliceblue;
   margin: 2vh;
-  font-size: 3vh;
+  font-size: 16px;
 }
 #text_button_dialog {
   color: aliceblue;
-  font-size: 3vh;
+  font-size: 16px;
 }
 #text_dialog_finalgame {
   color: #ffffff;
-  font-size: 3vh;
+  font-size: 16px;
+  padding: 10px;
+
 }
 
 /*CSS CLUE*/
