@@ -3,20 +3,9 @@
 import router from "@/router";
 import { ref, onMounted } from "vue";
 import { useGetDataLogicTest } from "../services/serviceLogicTest";
+import { useEscapeAddLogicTestStore } from "../stores/addEscapeRoom"
 
 
-/* const catchIdLogicTest = (getDataLogic) => {
-  const add = (getDataLogic) => {
-    getDataLogic.value.push(getDataLogic);
-  };
-
-  console.log(getDataLogic);
-  return {
-    catchIdLogicTest,
-    add,
-    getDataLogic,
-  };
-}; */
 
 const { getDataLogic, logicstests, logictest, errors, loading, destroyLogic, getlogic } = useGetDataLogicTest();
 const select = ref(true);
@@ -35,6 +24,8 @@ const details = async (id) => {
   await getlogic ();
   console.log(id);
 }
+
+const storeAdd =  onMounted(useEscapeAddLogicTestStore())
 
 onMounted(getDataLogic);
 
@@ -64,7 +55,7 @@ const listOfLogicalTest = getDataLogic();
         <td>{{ logictest.name }}</td>
        
         <div>
-          <v-btn class="ma-2" color="orange" @click="catchIdLogicTest(logictest.id)">Seleccionar</v-btn>
+          <v-btn class="ma-2" color="orange" @click="storeAdd()">Seleccionar</v-btn>
 
           <v-btn icon="mdi-alpha-x" class="delete btn btn-danger" color="red" @click="deleteCode(logictest.id)">
           </v-btn>

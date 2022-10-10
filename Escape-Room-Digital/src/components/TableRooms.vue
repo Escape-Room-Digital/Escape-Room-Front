@@ -1,14 +1,24 @@
 <script setup>
 //imports
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
+import { useEscapeAddLogicTestStore } from "../stores/addEscapeRoom"
 import { useGetDataEscapeRoom } from "../services/serviceEscapeRoom";
 import { useRouter, useRoute } from "vue-router";
+
 const route = useRoute();
 const router = useRouter();
+
+
 const { getDataEscapeRoom, data, errors, loading, deleteEscapeRoom } = useGetDataEscapeRoom();
+
 
 const listOfEscapeRoom = getDataEscapeRoom();
 
+ 
+const storeAdd =  onMounted(useEscapeAddLogicTestStore())
+
+
+//actions Crud
  const removeEscapeRoom = async (id) => {
   await deleteEscapeRoom(id);
   await getDataEscapeRoom();
@@ -29,7 +39,7 @@ const listOfEscapeRoom = getDataEscapeRoom();
 
 
 
-const select = ref(true);
+const select = ref();
 
 
 
@@ -39,6 +49,7 @@ const select = ref(true);
 const togglePushId = () => {
   router.push("/tablelogictest");
 };
+
 </script>
 
 <template>
@@ -66,7 +77,7 @@ const togglePushId = () => {
         <div>
           <v-btn class="ma-2" color="orange" @click="
             togglePushId();
-            catchIdEscapeRoom(listOfEscapeRoom.id);
+            storeAdd();
           ">Seleccionar</v-btn>
           <v-btn icon="mdi-alpha-x" class="delete btn btn-danger" color="red" @click="removeEscapeRoom(listOfEscapeRoom.id)">
           </v-btn>

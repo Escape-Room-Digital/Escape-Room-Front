@@ -1,29 +1,23 @@
 <script setup >
 import { ref, onMounted, computed } from 'vue';
+import { storeToRefs } from 'pinia'
 //import users store
-import { useEscapeStore } from "../stores/useEscapeGameStore";
+import {useEscapeStore} from "../stores/useEscapeGameStore"
 // declare store variable
-const store = useEscapeStore();
+const { escapes } = storeToRefs(useEscapeStore());
 
-const getEscapes = computed(() => {
-    return store.getEscapes;
-})
+const { fetchEscapes } = useEscapeStore()
 
 
 
-onMounted(() => {
-    store.fetchEscapes();
-    const dialog = false;
-})
-
-
+fetchEscapes();
 
 </script>
 
 
 
 <template>
-    <v-card class="mx-auto my-12 backgroud-color rounded-lg" max-width="674" v-for="gettersEscape in getEscapes"
+    <v-card class="mx-auto my-12 backgroud-color rounded-lg" max-width="674" v-for="gettersEscape in escapes"
         :key="gettersEscape.id">
 
         <v-card-title class="text-center background-title">Prueba Logica 1</v-card-title>
@@ -39,38 +33,16 @@ onMounted(() => {
         <div>
             <p class="text-center">{{gettersEscape.question}}</p>
         </div>
+        <input type="checkbox" id="checkbox" v-model="gettersEscape.result" />
+        <label for="checkbox">{{ gettersEscape.result }}</label>
     </v-card>
 
-<!-- Modal -->
-    <v-btn icon="mdi-" color="orange" dark @click.stop="dialog = true">
+    <!-- Modal -->
+    <v-btn icon="mdi-" color="orange" dark >
         Pista
     </v-btn>
 
-    <v-dialog v-model="dialog" max-width="290">
-        <v-card>
-            <v-card-title class="text-h5">
-                Use Google's location service?
-            </v-card-title>
-
-            <v-card-text>
-                Let Google help apps determine location. This means sending anonymous location data to Google, even when
-                no apps are running.
-            </v-card-text>
-
-            <v-card-actions>
-                <v-spacer></v-spacer>
-
-                <v-btn color="green darken-1" text @click="dialog = true">
-                    Disagree
-                </v-btn>
-
-                <v-btn color="green darken-1" text @click="dialog = false">
-                    Agree
-                </v-btn>
-            </v-card-actions>
-        </v-card>
-    </v-dialog>
-
+   
 </template>
 
 <style scoped>
