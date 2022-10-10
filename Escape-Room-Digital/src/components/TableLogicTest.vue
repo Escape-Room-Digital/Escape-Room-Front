@@ -1,6 +1,7 @@
 <script setup>
 //imports
-import { ref } from "vue";
+import router from "@/router";
+import { ref, onMounted } from "vue";
 import { useGetDataLogicTest } from "../services/serviceLogicTest";
 
 
@@ -17,8 +18,7 @@ import { useGetDataLogicTest } from "../services/serviceLogicTest";
   };
 }; */
 
-const { getDataLogic, data, errors, loading, destroyLogic } =
-  useGetDataLogicTest();
+const { getDataLogic, logicstests, logictest, errors, loading, destroyLogic, getlogic } = useGetDataLogicTest();
 const select = ref(true);
 const deletes = ref(true);
 
@@ -29,6 +29,14 @@ const deleteCode = async (id) => {
   await destroyLogic(id);
   await getDataLogic();
 };
+
+
+const details = async (id) => {
+  await getlogic ();
+  console.log(id);
+}
+
+onMounted(getDataLogic);
 
 const listOfLogicalTest = getDataLogic();
 </script>
@@ -52,20 +60,17 @@ const listOfLogicalTest = getDataLogic();
       </tr>
     </thead>
     <tbody>
-      <tr class="list-group" id="name" v-for="(listOfLogicalTest, id) in data" :key="id">
-        <td>{{ listOfLogicalTest.name }}</td>
-        <!-- <td>{{listOfLogicalTest.statement}}</td>
-                <td>{{listOfLogicalTest.result}}</td> -->
+      <tr class="list-group" id="name" v-for=" logictest in logicstests" :key="logictest.id">
+        <td>{{ logictest.name }}</td>
+       
         <div>
-          <v-btn class="ma-2" color="orange" @click="catchIdLogicTest(listOfLogicalTest.id)">Seleccionar</v-btn>
+          <v-btn class="ma-2" color="orange" @click="catchIdLogicTest(logictest.id)">Seleccionar</v-btn>
 
-          <v-btn icon="mdi-alpha-x" class="delete btn btn-danger" color="red" @click="deleteCode(listOfLogicalTest.id)">
+          <v-btn icon="mdi-alpha-x" class="delete btn btn-danger" color="red" @click="deleteCode(logictest.id)">
           </v-btn>
-
-          <router-link :to="{
-            name: 'logictestedit',
-            params: { id: listOfLogicalTest.id },
-          }">
+          <!-- <button id="margin" type="button" class="btn btn-success" @click="details(logictest.id)"> <RouterLink to="/details">detalles</RouterLink>  </button> -->
+          <router-link :to="`/tablelogictest/${logictest.id}`">detalles</router-link>
+          <router-link :to="{ name: 'logictestedit',  params: { id: logictest.id } }">
             <v-btn icon="mdi-pencil" color="darken-3"></v-btn>
           </router-link>
         </div>

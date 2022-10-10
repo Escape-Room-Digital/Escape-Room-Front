@@ -16,6 +16,7 @@ import LogicTestCreate from '../components/LogicTestCreate.vue'
 import CreateFormuserVue from '@/components/CreateFormuser.vue'
 import TableListCandidate from '@/components/TableListCandidate.vue'
 import  EscapeRoomCreate   from '../components/EscapeRoomCreate.vue'
+import  DetailsLogicTest   from '../components/DetailsLogicTest.vue'
 import Post from '../views/Post.vue'
 
 
@@ -63,6 +64,11 @@ const router = createRouter({
       name: 'tablelogictest',
       component: TableLogicTest
     },
+    {
+      path: "/tablelogictest/:id",
+      name: "details",
+      component: DetailsLogicTest ,
+  },
 
     {
       path: '/tablecodereditor',

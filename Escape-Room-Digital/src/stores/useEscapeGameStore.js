@@ -15,7 +15,7 @@ export const useEscapeStore = defineStore("escape", {
     actions: {
         async fetchEscapes() {
             try {
-                let options = await axios.get('http://127.0.0.1:8000/api/myLogicTestsInEscapeRoom/2') 
+                let options = await axios.get('http://127.0.0.1:8000/api/myLogicTestsInEscapeRoom') 
                 this.escapes = options.data
                 console.log(options.data)
             } catch (error) {

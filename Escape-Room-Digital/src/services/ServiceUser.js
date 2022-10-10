@@ -26,7 +26,7 @@ export const useGetDataUser = () => {
     const createUser = async (data) => {
         loading.value = true;
         try {
-            await axios.get("http://127.0.0.1:8000/api/user/user/create/", data); 
+            await axios.post("http://127.0.0.1:8000/api/user/store/", data); 
             await router.push({name: 'tablelistcandidate'})
             /* data.value = await res.data; */
             console.log(data.value);

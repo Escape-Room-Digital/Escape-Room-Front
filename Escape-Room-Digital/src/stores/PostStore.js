@@ -13,7 +13,7 @@ export const PostStore = defineStore("post",{
         image : null,
 
         loading:false,
-        url: 'http://127.0.0.1:8000/api/logictest'
+        url: 'http://127.0.0.1:8000/api/logictest/'
 
     }),
 
@@ -36,7 +36,7 @@ export const PostStore = defineStore("post",{
             }
         },
         addItem(){
-            if(this.name != '' && this.statement != '' && this.question != '' && this.result != '' && this.clue != ''){
+            if(this.name != '' && this.statement != '' && this.question != '' && this.result != '' && this.clue != '' && this.image != ''){
                 let form_data = new FormData();
 
                 form_data.append('name', this.name);
@@ -44,6 +44,7 @@ export const PostStore = defineStore("post",{
                 form_data.append('question', this.question);
                 form_data.append('result', this.result);
                 form_data.append('clue', this.clue);
+                form_data.append('image', this.image);
 
                 let config  = {
                     header:{
@@ -82,12 +83,10 @@ export const PostStore = defineStore("post",{
             }
         },
        async deleteItem(id){
-            axios.delete(`http://127.0.0.1:8000/api/logictest/${id}`).then(res=>{
+            axios.delete(`http://127.0.0.1:8000/api/logictest/${id}`, posts.value )
                 // this.fetchPosts()
-                let index = this.posts.findIndex(post=>post.id == id);
-                this.posts.splice(index,1)
-            })
-        },
+              
+            },
 
         changeImage(event){
             this.image = event.target.files[0]

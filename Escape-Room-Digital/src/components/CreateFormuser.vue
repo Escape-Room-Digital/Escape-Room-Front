@@ -11,6 +11,7 @@ export default {
             promo: "",
             solution: "",
             testdone: "",
+            password: "",
 
         });
 
@@ -58,6 +59,9 @@ export default {
                     <label for="testdone" id="label">Test Done</label>
                     <input type="text" name="textDone" id="name" class="form-control" placeholder="Text Done"
                         v-model="form.testdone" required />
+                    <label for="testdone" id="label">password</label>
+                    <input type="text" name="textDone" id="name" class="form-control" placeholder="Text Done"
+                        v-model="form.password" required />
                 </div>
                 <button type="submit" class="btn btn-dark">
                     enviar
