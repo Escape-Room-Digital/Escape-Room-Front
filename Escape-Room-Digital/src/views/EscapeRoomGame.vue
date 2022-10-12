@@ -4,11 +4,12 @@ import { ref, onMounted, computed } from 'vue';
 import { useEscapeStore } from "../stores/useEscapeGameStore"
 import TimerOut from "../components/TimerOut.vue"
 
+
 // declare store variable
 const store = useEscapeStore();
 
-const {fetchEscapes} = useEscapeStore();
- 
+const { fetchEscapes } = useEscapeStore();
+
 const getEscapeGame = computed(() => {
     return store.getEscapeGame
 })
@@ -21,7 +22,7 @@ fetchEscapes();
 
 ////////////
 
-const number1 = ref(0);
+/* const number1 = ref(0);
 const numdos = ref(0);
 
 const arrayAdd = ref([]);
@@ -44,12 +45,18 @@ const compareNumber = () => {
     } else {
         console.log('wrong number')
     }
-};
+}; */
 
-const mostrarResultado = ref('resultado');
+const correctAnsawer = ref(true);
 
+const compareNumber  = computed(() => {
+   if (arrayValues.value == correctAnsawer.value) 
+    console.log(compareNumber);
+    return "ok";
+  
+});
 
-
+const arrayValues = ref([]);
 
 
 </script>
@@ -57,7 +64,7 @@ const mostrarResultado = ref('resultado');
 
 
 <template>
-    <TimerOut/>
+    <TimerOut />
 
     <div v-for="getterEscape  in escapes" :key="getterEscape">
         <!--  v-for="value in getterEscape" :key="value" -->
@@ -72,11 +79,11 @@ const mostrarResultado = ref('resultado');
             </v-card-text>
             <v-img height="250" :src="getterEscape.image"></v-img>
             <v-divider class="mx-4"></v-divider>
-            
+
             <div>
                 <p class="text-center">{{getterEscape.clue}}</p>
             </div>
-           
+
             <v-btn icon="mdi-" color="orange" dark>
                 Pista
             </v-btn>
@@ -98,6 +105,15 @@ const mostrarResultado = ref('resultado');
                 <p class="text-center">{{getterEscape.clue}}</p>
             </div>
 
+     
+      
+                <v-radio :disabled="compareNumber" class="text-center" color="orange darken-3" v-model="arrayValues" id="uno" label="Opcion A"  value="1" ></v-radio>
+                <v-radio class="text-center" color="orange darken-3" v-model="arrayValues" id="dos" label="Opcion B"  value="0" ></v-radio>
+                <br>
+                <span>Checked names: {{ arrayValues }}</span>
+    
+
+            <!--    
             <input type="checkbox" id="checkbox" color="orange" @click="add1">
             <label for="checkbox">opcion a</label>
             <br>
@@ -107,18 +123,19 @@ const mostrarResultado = ref('resultado');
         
             <v-btn @click="compareNumber"></v-btn>
             <label for="checkbox">resultado</label>
+            -->
             <!-- Modal -->
-            <v-btn icon="mdi-" color="orange" dark>
-                Pista
-            </v-btn>
-        
-          
+
+
+
+
+
         </v-card>
 
     </div>
 
 
- 
+
 
 </template>
 
