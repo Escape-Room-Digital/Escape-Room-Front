@@ -1,8 +1,10 @@
 <script setup>
 import { ref, onMounted, computed } from "vue";
+import ModalClue from "@/components/ModalClue.vue";
 //import users store
 import { useEscapeStore } from "../stores/useEscapeGameStore";
-import ModalClue from "@/components/ModalClue.vue";
+import TimerOut from "../components/TimerOut.vue";
+
 // declare store variable
 const store = useEscapeStore();
 
@@ -47,6 +49,7 @@ const mostrarResultado = ref("resultado");
 </script>
 
 <template>
+  <TimerOut />
   <div>
     <div
       v-for="(getterEscape, index) in escapes"
@@ -77,10 +80,15 @@ const mostrarResultado = ref("resultado");
         <label for="checkbox">opcion b</label>
         <v-btn @click="compareNumber"></v-btn>
         <label for="checkbox">resultado</label>
-        <v-btn icon="mdi-" color="orange"  data-bs-toggle="modal"
-          :data-bs-target="'#showModal' + getterEscape.id" dark>
-                Pista
-        </v-btn> 
+        <v-btn
+          icon="mdi-"
+          color="orange"
+          data-bs-toggle="modal"
+          :data-bs-target="'#showModal' + getterEscape.id"
+          dark
+        >
+          Pista
+        </v-btn>
       </v-card>
       <modal-clue :id="getterEscape.id" :clue="getterEscape.clue" />
     </div>

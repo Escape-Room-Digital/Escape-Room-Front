@@ -10,7 +10,7 @@ const drawer = null
 
 
 <template>
-  <v-app>
+  <v-app fluid>
    <Header/>
      
     
