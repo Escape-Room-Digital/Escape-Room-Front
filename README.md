@@ -71,7 +71,17 @@ Install dependencies
 ```bash Back
   npm install laravel
   npm install composer
-
+  composer update
+  npm install
+  Crear el archivo .env
+  Copiar todo lo del archivo .env.example
+  Pegamos en el .env
+  Colocar el nombre de la BBDD en la linea 14 DB_DATABASE=escaperoomdigital
+  Ir a MySql y crear una BBDD con el nombre escaperoomdigital
+  Importar nuestra bbdd escaperoomdigital.sql que está en la carpeta public 
+  Ejecuta en la terminal el comando php artisan key:generate para generar la llave del proyecto
+  Php artisan migrate:fresh --seed
+  
 ```
 
 ```bash Front
@@ -88,8 +98,14 @@ Install dependencies
 
 Start the server
 
-```bash
+```bash front
   npm run start
+  npm run dev
+ ```
+   
+```bash back
+npm run dev
+php artisan serve
 ```
 
 
@@ -155,7 +171,6 @@ https://www.figma.com/file/FojGlYBBtVpu4J0p7aT0Mu/Project?node-id=0%3A1
 - [@prlongoria](https://github.com/orgs/Escape-Room-Digital/people/prlongoria)
 - [@BigBen999](https://github.com/orgs/Escape-Room-Digital/people/BigBen999)
 - [@lucyalvarado4692](https://github.com/orgs/Escape-Room-Digital/people/lucyalvarado4692)
-- [@Mlobos1111](https://github.com/orgs/Escape-Room-Digital/people/Mlobos1111)
 
 
 
