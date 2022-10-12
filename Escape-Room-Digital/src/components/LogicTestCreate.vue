@@ -8,7 +8,8 @@ export default {
       name: "",
       statement: "",
       question: "",
-      result: "",
+      correct: "",
+      incorrect: "",
       clue: "",
       image: "",
     });
@@ -48,10 +49,13 @@ export default {
           <input type="text" name="director" id="director" class="form-control" v-model="form.question" required />
         </div>
         <div class="form-group">
-          <label for="result">Result</label>
-          <input type="text" name="director" id="director" class="form-control" v-model="form.result" required />
+          <label for="result">Correct</label>
+          <input type="text" name="director" id="director" class="form-control" v-model="form.correct" required />
         </div>
-
+        <div class="form-group">
+          <label for="result">Incorrect</label>
+          <input type="text" name="director" id="director" class="form-control" v-model="form.incorrect" required />
+        </div>
         <div class="form-group">
           <label for="clue">Clue</label>
           <input type="text" name="clue" id="director" class="form-control" v-model="form.clue" required />
