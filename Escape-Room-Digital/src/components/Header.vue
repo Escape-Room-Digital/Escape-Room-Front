@@ -23,11 +23,11 @@
     </v-btn>
 
     <v-btn>
-      <RouterLink to="/loginmember"><a class="text-link">Login Admin</a></RouterLink>
+      <RouterLink to="/loginadmin"><a class="text-link">Login Admin</a></RouterLink>
     </v-btn>
 
     <v-btn>
-      <RouterLink to="/escaperoomgame"><a class="text-link">Login Candidato</a></RouterLink>
+      <RouterLink to="/Loginuser"><a class="text-link">Login Candidato</a></RouterLink>
     </v-btn>
 
         

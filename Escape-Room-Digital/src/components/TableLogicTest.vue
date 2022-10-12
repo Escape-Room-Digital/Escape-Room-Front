@@ -77,7 +77,7 @@ const listOfLogicalTest = getDataLogic();
             </div>  -->
   </v-table>
 
-  <RouterLink to="/paneladmin">
+  <RouterLink to="/loginadmin/paneladmin">
     <v-btn class="btn btn-success"> BACK </v-btn>
   </RouterLink>
 </template>

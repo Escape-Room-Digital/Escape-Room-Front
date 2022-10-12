@@ -70,7 +70,7 @@ const removeUser = async (id) => {
   
         </v-table>
 
-        <RouterLink to="/paneladmin">
+        <RouterLink to="/loginadmin/paneladmin">
 
             <v-btn class="btn btn-success"> BACK </v-btn>
 
