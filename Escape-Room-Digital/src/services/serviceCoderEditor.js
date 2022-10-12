@@ -4,7 +4,7 @@ import { useRouter } from "vue-router";
 
 export const useGetDataCoderEditor = () => {
   const data = ref([]); // just one
-  const datas = ref([]);// just varius 
+  const datas = ref([]); // just varius
   const errors = ref([]);
   const loading = ref(true);
   const router = useRouter();
@@ -24,7 +24,7 @@ export const useGetDataCoderEditor = () => {
 
   const getcoder = async (id) => {
     let response = await axios.get(
-      `http://127.0.0.1:8000/api/codeeditor/show/${id}`
+      `http://127.0.0.1:8000/api/codeeditor/edit/${id}`
     );
     data.value = response.data;
   };
@@ -45,7 +45,7 @@ export const useGetDataCoderEditor = () => {
     }
   };
 
-  const updateCoder = async (id) => {
+  const updateCoder = async (id, data) => {
     errors.value = [];
     try {
       // http method must be put for match patch method in .net core api

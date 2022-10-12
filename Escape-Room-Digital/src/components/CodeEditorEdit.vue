@@ -2,7 +2,6 @@
 import { useGetDataCoderEditor } from "../services/serviceCoderEditor";
 import { onMounted } from "vue";
 
-
 export default {
   props: {
     id: {
@@ -15,21 +14,22 @@ export default {
 
     onMounted(() => getcoder(props.id));
 
-    const saveCode = async () => {
-      await updateCoder(props.id);
+    const saveCode = async (data) => {
+      await updateCoder(data.id, data);
     };
 
     return {
       errors,
       data,
       saveCode,
+      getcoder,
     };
   },
 };
 </script>
 
 <template>
-<div class="container">
+  <div class="container">
     <div class="container_orange">
       <div class="container_white">
         <h2>EDITAR PRUEBA DE CÓDIGO</h2>
@@ -47,7 +47,6 @@ export default {
           </div>
           <div class="form-group">
             <label for="statement">Enunciado</label>
-
             <input
               type="text"
               name="statement"
@@ -68,23 +67,21 @@ export default {
               required
             />
           </div>
+          <div id="button_back">
+            <RouterLink :to="{ name: 'tablecodereditor' }" class="btn btn-dark">
+              <p id="text_back">BACK</p>
+            </RouterLink>
+          </div>
+          <div class="">
+            <button type="submit" class="btn btn-dark">
+              <p id="text_enviar">Enviar</p>
+            </button>
+          </div>
         </form>
-      </div>
-
-      <div id="button_back">
-        <RouterLink :to="{ name: 'tablecodereditor' }" class="btn btn-dark">
-          <p id="text_back">BACK</p>
-        </RouterLink>
-      </div>
-      <div class="">
-        <button type="submit" class="btn btn-dark">
-          <p id="text_enviar">Enviar</p>
-        </button>
       </div>
     </div>
   </div>
 </template>
-
 
 <style scoped>
 @import "../assets/CoderEditorEdit.css";

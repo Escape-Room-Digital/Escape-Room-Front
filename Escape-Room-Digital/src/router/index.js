@@ -105,7 +105,7 @@ const router = createRouter({
     },
 
     {
-      path: "/codeeditoredit",
+      path: "/codeeditoredit/:id",
       name: "codeeditoredit",
       component: CodeEditorEdit,
       props: true
