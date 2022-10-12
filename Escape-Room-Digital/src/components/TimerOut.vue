@@ -2,7 +2,7 @@
 export default {
     data() {
         return {
-            timerCount: 900
+            timerCount: 600
         }
     },
     watch: {

@@ -26,10 +26,7 @@
   <p  class="title_options"><strong><RouterLink to="/tablelistcandidate">Listado de Candidatos</RouterLink></strong></p>
 </div>
 <div id="container_listadoCandidatosPruebaCompletada">
-  <p  class="title_options"><strong><RouterLink to="/game">GAME</RouterLink></strong></p>
-</div>
-<div id="container_listadoCandidatosPruebaCompletada">
-  <p  class="title_options"><strong><RouterLink to="/post">post</RouterLink></strong></p>
+  <p  class="title_options"><strong><RouterLink to="/post">Config</RouterLink></strong></p>
 </div>
  </div>  
   </div>

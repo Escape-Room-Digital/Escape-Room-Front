@@ -38,12 +38,7 @@
       >
     </v-btn>
 
-    <v-btn>
-      <RouterLink to="/prueba"><a class="text-link">pruebas</a></RouterLink>
-    </v-btn>
-    <v-btn>
-      <RouterLink to="/post"><a class="text-link">post</a></RouterLink>
-    </v-btn>
+   
   </v-app-bar>
   <v-sheet id="scrolling-techniques-2" class="overflow-y-auto" max-height="600">
   </v-sheet>
