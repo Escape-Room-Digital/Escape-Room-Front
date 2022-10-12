@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 //views
 import HomeView from '../views/HomeView.vue'
-
 import PanelAdmin from '../views/PanelAdmin.vue'
 import LandingPage from '../views/LandingPage.vue'
 import EscapeRoomGame from '../views/EscapeRoomGame.vue'
@@ -16,11 +15,11 @@ import LogicTestCreate from '../components/LogicTestCreate.vue'
 import CreateFormuserVue from '@/components/CreateFormuser.vue'
 import TableListCandidate from '@/components/TableListCandidate.vue'
 import  EscapeRoomCreate   from '../components/EscapeRoomCreate.vue'
-import  DetailsLogicTest   from '../components/DetailsLogicTest.vue'
 import LoginAdmin from '../components/LoginAdmin.vue'
 import LoginUser from '../components/LoginUser.vue'
 import Post from '../views/Post.vue'
-import Prueba from '../views/prueba.vue'
+import Templates from '../components/TemplateForms.vue'
+
 
 
 const router = createRouter({
@@ -31,8 +30,6 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
-
-  
 
     {
       path: '/loginadmin/paneladmin',
@@ -51,11 +48,7 @@ const router = createRouter({
       name: 'escaperoomgame',
       component: EscapeRoomGame
     },
-    {
-      path: '/prueba',
-      name: 'prueba',
-      component: Prueba
-    },
+
     //components
     {
       path: '/tablerooms',
@@ -68,12 +61,7 @@ const router = createRouter({
       name: 'tablelogictest',
       component: TableLogicTest
     },
-    {
-      path: "/tablelogictest/:id",
-      name: "details",
-      component: DetailsLogicTest ,
-  },
-
+   
     {
       path: '/tablecodereditor',
       name: 'tablecodereditor',
@@ -95,7 +83,7 @@ const router = createRouter({
     {
       path: "/templateforms",
       name: "templateforms",
-      component: () => import("../views/TemplateForms.vue"),
+      component: Templates
     },
 
     {

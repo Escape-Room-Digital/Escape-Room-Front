@@ -2,8 +2,8 @@
 export default {
     data: () => ({
         form: false,
-        email: null,
-        password: null,
+        email: "admin@admin.com",
+        password: "password",
         loading: false,
     }),
 
@@ -55,27 +55,5 @@ export default {
 </template>
 
 <style scoped>
-a {
-    color: white;
-}
-
-#logear {
-    width: 30vh;
-}
-
-.margin {
-    padding: 1px;
-}
-
-.text{
-    color:aliceblue;
-    text-decoration: none;
-    margin: auto;
-    text-align: center;
-}
-
-.card-login {
-    background-color: #FF4702;
-}
-
+@import "../assets/Login.css";
 </style>

@@ -1,5 +1,5 @@
 <script>
-export default {};
+
 </script>
 <template>
   <div class="container_all">
