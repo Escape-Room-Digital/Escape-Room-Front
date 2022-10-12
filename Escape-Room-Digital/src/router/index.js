@@ -18,6 +18,7 @@ import TableListCandidate from '@/components/TableListCandidate.vue'
 import  EscapeRoomCreate   from '../components/EscapeRoomCreate.vue'
 import  DetailsLogicTest   from '../components/DetailsLogicTest.vue'
 import Post from '../views/Post.vue'
+import Prueba from '../views/prueba.vue'
 
 
 const router = createRouter({
@@ -51,6 +52,11 @@ const router = createRouter({
       path: '/escaperoomgame',
       name: 'escaperoomgame',
       component: EscapeRoomGame
+    },
+    {
+      path: '/prueba',
+      name: 'prueba',
+      component: Prueba
     },
     //components
     {

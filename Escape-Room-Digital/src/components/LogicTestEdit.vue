@@ -6,70 +6,29 @@
         <form @submit.prevent="saveLogic">
           <div class="form-group">
             <label for="name" id="label">Nombre</label>
-            <input
-              type="text"
-              name="title"
-              id="title"
-              class="form-control"
-              v-model="listOfLogicalTest"              required
-            />
+            <input type="text" name="title" id="title" class="form-control" v-model="listOfLogicalTest" required />
           </div>
 
           <div class="form-group">
             <label for="statement">Statement</label>
-            <input
-              type="text"
-              name="director"
-              id="director"
-              class="form-control"
-              v-model="form"
-              required
-            />
+            <input type="text" name="director" id="director" class="form-control" v-model="form" required />
           </div>
           <div class="form-group">
             <label for="question">Question</label>
-            <input
-              type="text"
-              name="director"
-              id="director"
-              class="form-control"
-              v-model="form"
-              required
-            />
+            <input type="text" name="director" id="director" class="form-control" v-model="form" required />
           </div>
           <div class="form-group">
             <label for="result">Result</label>
-            <input
-              type="text"
-              name="director"
-              id="director"
-              class="form-control"
-              v-model="form"
-              required
-            />
+            <input type="text" name="director" id="director" class="form-control" v-model="form" required />
           </div>
 
           <div class="form-group">
             <label for="clue">Clue</label>
-            <input
-              type="text"
-              name="clue"
-              id="director"
-              class="form-control"
-              v-model="form"
-              required
-            />
+            <input type="text" name="clue" id="director" class="form-control" v-model="form" required />
           </div>
           <div class="form-group">
             <label for="clue">Image</label>
-            <input
-              type="text"
-              name="image"
-              id="director"
-              class="form-control"
-              v-model="form"
-              required
-            />
+            <input type="text" name="image" id="director" class="form-control" v-model="form" required />
           </div>
           <br />
         </form>
@@ -88,17 +47,17 @@
 <script>
 import { useGetDataLogicTest } from "../services/serviceLogicTest";
 import { onMounted } from "vue";
-import { data } from "browserslist";
+
 
 export default {
-  props:{
-    id:{
+  props: {
+    id: {
       required: true,
       type: String,
     },
   },
   setup(props) {
-    const { errors, data, getlogic, updateLogic } = useGetDataLogicTest();
+    const { errors, logicstests, logictest, getlogic, updateLogic } = useGetDataLogicTest();
 
     onMounted(() => getlogic(props.id));
 
@@ -125,6 +84,7 @@ export default {
   flex-direction: column;
   align-items: center;
 }
+
 .container_white {
   display: flex;
   flex-direction: column;
@@ -135,10 +95,12 @@ export default {
   margin: 2vh;
   border-radius: 8px;
 }
+
 H2 {
   display: flex;
   justify-content: center;
 }
+
 .container_orange {
   display: flex;
   flex-direction: column;
@@ -150,6 +112,7 @@ H2 {
   margin: 2vh;
   border-radius: 8px;
 }
+
 .container_button {
   display: flex;
   justify-content: center;
@@ -160,13 +123,16 @@ H2 {
   margin: 3vh;
   border-radius: 8px;
 }
+
 #text_enviar {
   font-size: 3vh;
   color: #ff4702;
 }
+
 .form-group {
   margin: 1vh;
 }
+
 #text_back {
   color: #ff4702;
 }

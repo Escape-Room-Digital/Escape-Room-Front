@@ -1,48 +1,122 @@
 <script setup >
 import { ref, onMounted, computed } from 'vue';
-import { storeToRefs } from 'pinia'
 //import users store
-import {useEscapeStore} from "../stores/useEscapeGameStore"
+import { useEscapeStore } from "../stores/useEscapeGameStore"
 // declare store variable
-const { escapes } = storeToRefs(useEscapeStore());
+const store = useEscapeStore();
 
-const { fetchEscapes } = useEscapeStore()
-
-
+const {fetchEscapes} = useEscapeStore();
+ 
+const getEscapeGame = computed(() => {
+    return store.getEscapeGame
+})
+const escapes = computed(() => {
+    return store.escapes
+})
 
 fetchEscapes();
+
+
+////////////
+
+const number1 = ref(0);
+const numdos = ref(0);
+
+const arrayAdd = ref([]);
+const arrayCompare = ref([]);
+
+
+const add = () => {
+    arrayAdd.value.push(number1.value);
+    console.log(arrayAdd.value)
+}
+
+const add1 = () => {
+    arrayCompare.value.push(numdos.value);
+    console.log(arrayCompare.value)
+}
+
+const compareNumber = () => {
+    if (arrayAdd.value >= arrayCompare.value) {
+        console.log('correct number')
+    } else {
+        console.log('wrong number')
+    }
+};
+
+const mostrarResultado = ref('resultado');
+
+
+
+
 
 </script>
 
 
 
 <template>
-    <v-card class="mx-auto my-12 backgroud-color rounded-lg" max-width="674" v-for="gettersEscape in escapes"
-        :key="gettersEscape.id">
 
-        <v-card-title class="text-center background-title">Prueba Logica 1</v-card-title>
+    <div v-for="getterEscape  in escapes" :key="getterEscape">
+        <!--  v-for="value in getterEscape" :key="value" -->
+        <v-card v-if=" getterEscape.id === 0" class="mx-auto my-12 backgroud-color rounded-lg" max-width="674">
 
-        <v-card-text>
-            <div class="my-4 text-subtitle-1 text-center">{{gettersEscape.name}}</div>
+            <v-card-title class="text-center background-title">{{getterEscape.name}}</v-card-title>
+
+            <v-card-text>
+                <div class="my-4 text-subtitle-1 text-center">
+                    <p class="text-center">{{getterEscape.statement}}</p>
+                </div>
+            </v-card-text>
+            <v-img height="250" :src="getterEscape.image"></v-img>
+            <v-divider class="mx-4"></v-divider>
+            
             <div>
-                <p class="text-center">{{gettersEscape.statement}}</p>
+                <p class="text-center">{{getterEscape.clue}}</p>
             </div>
-        </v-card-text>
-        <v-img height="250" :src="gettersEscape.image"></v-img>
-        <v-divider class="mx-4"></v-divider>
-        <div>
-            <p class="text-center">{{gettersEscape.question}}</p>
-        </div>
-        <input type="checkbox" id="checkbox" v-model="gettersEscape.result" />
-        <label for="checkbox">{{ gettersEscape.result }}</label>
-    </v-card>
+           
+            <v-btn icon="mdi-" color="orange" dark>
+                Pista
+            </v-btn>
+        </v-card>
 
-    <!-- Modal -->
-    <v-btn icon="mdi-" color="orange" dark >
-        Pista
-    </v-btn>
+        <v-card v-if=" getterEscape.id >= 2" class="mx-auto my-12 backgroud-color rounded-lg" max-width="674">
 
-   
+            <v-card-title class="text-center background-title">{{getterEscape.name}}</v-card-title>
+
+            <v-card-text>
+                <div class="my-4 text-subtitle-1 text-center">
+                    <p class="text-center">{{getterEscape.statement}}</p>
+                </div>
+            </v-card-text>
+
+            <v-img height="250" :src="getterEscape.image"></v-img>
+            <v-divider class="mx-4"></v-divider>
+            <div>
+                <p class="text-center">{{getterEscape.clue}}</p>
+            </div>
+
+            <input type="checkbox" id="checkbox" color="orange" @click="add1">
+            <label for="checkbox">opcion a</label>
+            <br>
+            <input type="checkbox" id="checkbox" @click="add">
+            <label for="checkbox">opcion b</label>
+          
+        
+            <v-btn @click="compareNumber"></v-btn>
+            <label for="checkbox">resultado</label>
+            <!-- Modal -->
+            <v-btn icon="mdi-" color="orange" dark>
+                Pista
+            </v-btn>
+        
+          
+        </v-card>
+
+    </div>
+
+
+ 
+
 </template>
 
 <style scoped>

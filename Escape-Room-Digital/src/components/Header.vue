@@ -34,6 +34,10 @@
     <v-btn>
       <RouterLink to="/templateforms"><a class="text-link">Template/Form</a></RouterLink>
     </v-btn>
+
+    <v-btn>
+      <RouterLink to="/prueba"><a class="text-link">pruebas</a></RouterLink>
+    </v-btn>
     
     
   </v-app-bar>

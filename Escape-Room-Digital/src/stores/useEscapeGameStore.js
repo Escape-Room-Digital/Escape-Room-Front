@@ -1,3 +1,4 @@
+
 //stores/users.js
 
 import { defineStore } from 'pinia'
@@ -9,19 +10,23 @@ export const useEscapeStore = defineStore("escape", {
         escapes: [],
     }),
     getters: {
-       
+        getEscapeGame(state) {
+            return state.escapes
+        }
     },
     actions: {
         async fetchEscapes() {
             try {
-                let options = await axios.get('http://127.0.0.1:8000/api/myLogicTestsInEscapeRoom/1') 
-                this.escapes = options.data
+                const options = await axios.get('http://127.0.0.1:8000/api/myLogicTestsInEscapeRoom/2')
+                this.escapes = options.data 
                 console.log(options.data)
-            } catch (error) {
+            }
+            catch (error) {
                 alert(error)
                 console.log(error)
             }
-        }
+        },
 
+        
     },
 })
