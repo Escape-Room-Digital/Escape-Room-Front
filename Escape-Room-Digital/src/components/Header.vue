@@ -17,9 +17,11 @@
       max-width="150"
       src="https://femcoders.factoriaf5.org/wp-content/uploads/2021/12/factoria-web.png"
     ></v-img>
-    <v-app-bar-title class="text-center title-bar"> Escape Room Digital </v-app-bar-title>
+    <v-app-bar-title class="text-center title-bar">
+      Escape Room Digital
+    </v-app-bar-title>
     <v-btn>
-        <RouterLink to="/"><a class="text-link">Home</a></RouterLink>
+      <RouterLink to="/"><a class="text-link">Home</a></RouterLink>
     </v-btn>
 
     <v-btn>
@@ -30,16 +32,18 @@
       <RouterLink to="/Loginuser"><a class="text-link">Login Candidato</a></RouterLink>
     </v-btn>
 
-        
     <v-btn>
-      <RouterLink to="/templateforms"><a class="text-link">Template/Form</a></RouterLink>
+      <RouterLink to="/templateforms"
+        ><a class="text-link">Template/Form</a></RouterLink
+      >
     </v-btn>
 
     <v-btn>
       <RouterLink to="/prueba"><a class="text-link">pruebas</a></RouterLink>
     </v-btn>
-    
-    
+    <v-btn>
+      <RouterLink to="/post"><a class="text-link">post</a></RouterLink>
+    </v-btn>
   </v-app-bar>
   <v-sheet id="scrolling-techniques-2" class="overflow-y-auto" max-height="600">
   </v-sheet>
@@ -50,7 +54,7 @@
   text-decoration: none;
   color: black;
 }
-.title-bar{
-  font-family: 'Poppins', sans-serif;
+.title-bar {
+  font-family: "Poppins", sans-serif;
 }
 </style>
