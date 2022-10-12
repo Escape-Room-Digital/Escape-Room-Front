@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 //views
 import HomeView from '../views/HomeView.vue'
-import LoginMember from '../views/LoginMember.vue'
+
 import PanelAdmin from '../views/PanelAdmin.vue'
 import LandingPage from '../views/LandingPage.vue'
 import EscapeRoomGame from '../views/EscapeRoomGame.vue'
@@ -17,6 +17,8 @@ import CreateFormuserVue from '@/components/CreateFormuser.vue'
 import TableListCandidate from '@/components/TableListCandidate.vue'
 import  EscapeRoomCreate   from '../components/EscapeRoomCreate.vue'
 import  DetailsLogicTest   from '../components/DetailsLogicTest.vue'
+import LoginAdmin from '../components/LoginAdmin.vue'
+import LoginUser from '../components/LoginUser.vue'
 import Post from '../views/Post.vue'
 import Prueba from '../views/prueba.vue'
 
@@ -30,14 +32,10 @@ const router = createRouter({
       component: HomeView
     },
 
-    {
-      path: '/loginmember',
-      name: 'loginmember',
-      component: LoginMember
-    },
+  
 
     {
-      path: '/paneladmin',
+      path: '/loginadmin/paneladmin',
       name: 'paneladmin',
       component: PanelAdmin
     },
@@ -49,7 +47,7 @@ const router = createRouter({
     },
 
     {
-      path: '/escaperoomgame',
+      path: '/loginuser/escaperoomgame',
       name: 'escaperoomgame',
       component: EscapeRoomGame
     },
@@ -130,6 +128,17 @@ const router = createRouter({
       name: "logictestedit",
       component: LogicTestEdit,
       props: true
+    },
+
+    {
+      path: '/loginadmin',
+      name: 'loginadmin',
+      component: LoginAdmin
+    },
+    {
+      path: '/loginuser',
+      name: 'loginuser',
+      component: LoginUser
     },
     
     {

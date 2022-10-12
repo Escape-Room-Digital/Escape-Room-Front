@@ -45,7 +45,7 @@ export default {
             <br />
             <v-row  justify="space-around">
             <v-btn :disabled="!form" :loading="loading" inlineblock color="dark" class=""  size="large" type="submit" elevation="4">
-            <RouterLink to="/paneladmin"><a class="text">Acceder</a></RouterLink>
+            <RouterLink to="/loginuser/escaperoomgame"><a class="text">Acceder</a></RouterLink>
             </v-btn>
 
             <v-btn inlineblock color="dark"  size="large" type="submit" elevation="4" ><RouterLink to="/"><a class="text">Cancelar</a></RouterLink></v-btn></v-row>

@@ -42,7 +42,7 @@ const drawer = null
 <style scoped>
 
   main{
-    background-image: url("/Users/David/ProyectosF5David/Escape-Room/Escape-Room-Digital/src/assets/image/background.png");
+    background-image: url("./assets/image/background.png");
     background-size: 1500px
     
   }
