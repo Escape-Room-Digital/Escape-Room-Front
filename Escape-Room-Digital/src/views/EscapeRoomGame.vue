@@ -53,7 +53,6 @@ const mostrarResultado = ref("resultado");
       :key="index"
       :getterEscape="getterEscape"
     >
-      <!--  v-for="value in getterEscape" :key="value" -->
       <v-card class="mx-auto my-12 backgroud-color rounded-lg" max-width="674">
         <v-card-title class="text-center background-title">{{
           getterEscape.name
@@ -76,23 +75,12 @@ const mostrarResultado = ref("resultado");
         <br />
         <input type="checkbox" id="checkbox" @click="add" />
         <label for="checkbox">opcion b</label>
-
         <v-btn @click="compareNumber"></v-btn>
         <label for="checkbox">resultado</label>
-        <!-- Modal -->
-        <!-- <v-btn icon="mdi-" color="orange" dark>
+        <v-btn icon="mdi-" color="orange"  data-bs-toggle="modal"
+          :data-bs-target="'#showModal' + getterEscape.id" dark>
                 Pista
-                </v-btn> -->
-
-        <!-- Button trigger modal SHOW-->
-        <button
-          id="button"
-          type="button"
-          data-bs-toggle="modal"
-          :data-bs-target="'#showModal' + getterEscape.id"
-        >
-          PISTA
-        </button>
+        </v-btn> 
       </v-card>
       <modal-clue :id="getterEscape.id" :clue="getterEscape.clue" />
     </div>
