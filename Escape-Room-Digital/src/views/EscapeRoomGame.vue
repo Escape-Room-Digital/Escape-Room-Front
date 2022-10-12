@@ -2,6 +2,8 @@
 import { ref, onMounted, computed } from 'vue';
 //import users store
 import { useEscapeStore } from "../stores/useEscapeGameStore"
+import TimerOut from "../components/TimerOut.vue"
+
 // declare store variable
 const store = useEscapeStore();
 
@@ -55,6 +57,7 @@ const mostrarResultado = ref('resultado');
 
 
 <template>
+    <TimerOut/>
 
     <div v-for="getterEscape  in escapes" :key="getterEscape">
         <!--  v-for="value in getterEscape" :key="value" -->
