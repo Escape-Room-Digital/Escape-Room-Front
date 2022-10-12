@@ -5,8 +5,8 @@ import { useEscapeStore } from "../stores/useEscapeGameStore"
 // declare store variable
 const store = useEscapeStore();
 
-const {fetchEscapes} = useEscapeStore();
- 
+const { fetchEscapes } = useEscapeStore();
+
 const getEscapeGame = computed(() => {
     return store.getEscapeGame
 })
@@ -56,66 +56,61 @@ const mostrarResultado = ref('resultado');
 
 <template>
 
-    <div v-for="getterEscape  in escapes" :key="getterEscape">
-        <!--  v-for="value in getterEscape" :key="value" -->
-        <v-card v-if=" getterEscape.id === 0" class="mx-auto my-12 backgroud-color rounded-lg" max-width="674">
+    <div>
+        <div v-for="(getterEscape, index)  in escapes" :key="index" :getterEscape="getterEscape">
+            <!--  v-for="value in getterEscape" :key="value" -->
 
-            <v-card-title class="text-center background-title">{{getterEscape.name}}</v-card-title>
 
-            <v-card-text>
-                <div class="my-4 text-subtitle-1 text-center">
-                    <p class="text-center">{{getterEscape.statement}}</p>
+            <v-card class="mx-auto my-12 backgroud-color rounded-lg" max-width="674">
+
+                <v-card-title class="text-center background-title">{{getterEscape.name}}</v-card-title>
+
+                <v-card-text>
+                    <div class="my-4 text-subtitle-1 text-center">
+                        <p class="text-center">{{getterEscape.statement}}</p>
+                    </div>
+                </v-card-text>
+
+                <v-img height="250" :src="getterEscape.image"></v-img>
+                <v-divider class="mx-4"></v-divider>
+                <div>
+                    <p class="text-center">{{getterEscape.clue}}</p>
                 </div>
-            </v-card-text>
-            <v-img height="250" :src="getterEscape.image"></v-img>
-            <v-divider class="mx-4"></v-divider>
-            
-            <div>
-                <p class="text-center">{{getterEscape.clue}}</p>
-            </div>
-           
-            <v-btn icon="mdi-" color="orange" dark>
+
+                <input type="checkbox" id="checkbox" color="orange" @click="add1">
+                <label for="checkbox">opcion a</label>
+                <br>
+                <input type="checkbox" id="checkbox" @click="add">
+                <label for="checkbox">opcion b</label>
+
+
+                <v-btn @click="compareNumber"></v-btn>
+                <label for="checkbox">resultado</label>
+                <!-- Modal -->
+                <!-- <v-btn icon="mdi-" color="orange" dark>
                 Pista
-            </v-btn>
-        </v-card>
+            </v-btn> -->
 
-        <v-card v-if=" getterEscape.id >= 2" class="mx-auto my-12 backgroud-color rounded-lg" max-width="674">
 
-            <v-card-title class="text-center background-title">{{getterEscape.name}}</v-card-title>
 
-            <v-card-text>
-                <div class="my-4 text-subtitle-1 text-center">
-                    <p class="text-center">{{getterEscape.statement}}</p>
-                </div>
-            </v-card-text>
+                <!-- Button trigger modal SHOW-->
+                <button id="button" type="button" data-bs-toggle="modal"
+                    :data-bs-target="'#showModal' + getterEscape.id">
+                    PISTA
+                </button>
 
-            <v-img height="250" :src="getterEscape.image"></v-img>
-            <v-divider class="mx-4"></v-divider>
-            <div>
-                <p class="text-center">{{getterEscape.clue}}</p>
-            </div>
-
-            <input type="checkbox" id="checkbox" color="orange" @click="add1">
-            <label for="checkbox">opcion a</label>
-            <br>
-            <input type="checkbox" id="checkbox" @click="add">
-            <label for="checkbox">opcion b</label>
-          
-        
-            <v-btn @click="compareNumber"></v-btn>
-            <label for="checkbox">resultado</label>
-            <!-- Modal -->
-            <v-btn icon="mdi-" color="orange" dark>
-                Pista
-            </v-btn>
-        
-          
+                <modal-clue :getterEscape="getterEscape" :id="getterEscape.id"></modal-clue>
+        </div>
         </v-card>
 
     </div>
 
+    
 
- 
+
+
+
+
 
 </template>
 
