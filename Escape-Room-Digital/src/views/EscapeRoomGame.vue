@@ -46,9 +46,9 @@ const awesome = ref(true)
   <TimerOut />
   
   <div>
-    <div v-for="(getterEscape, index) in escapes" :key="index" :getterEscape="getterEscape">
+    <div class="m-1" v-for="(getterEscape, index) in escapes" :key="index" :getterEscape="getterEscape">
 
-      <v-card class="mx-auto my-12 backgroud-color rounded-lg" max-width="674" max-height="956">
+      <v-card class="mx-auto my-12 backgroud-color rounded-lg" max-width="674" max-height="856">
 
         <v-card-title class="text-center background-title">{{getterEscape.name}}</v-card-title>
 
@@ -57,6 +57,12 @@ const awesome = ref(true)
             <p class="text-center">{{ getterEscape.statement }}</p>
           </div>
         </v-card-text>
+        <v-card-text>
+          <div class="my-4 text-subtitle-1 text-center">
+            <p class="text-center">{{ getterEscape.question }}</p>
+          </div>
+        </v-card-text>
+        
 
         <v-img height="250" :src="getterEscape.image"></v-img>
         <v-divider class="mx-4"></v-divider>
