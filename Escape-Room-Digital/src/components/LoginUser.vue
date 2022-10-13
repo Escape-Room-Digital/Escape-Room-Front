@@ -1,0 +1,59 @@
+<script>
+export default {
+    data: () => ({
+        form: false,
+        email: "user@user.com",
+        password: "password",
+        loading: false,
+    }),
+
+    methods: {
+        onSubmit() {
+            if (!this.form) return
+
+            this.loading = true
+
+            setTimeout(() => (this.loading = false), 2000)
+        },
+        required(v) {
+            return !!v || 'Field is required'
+        },
+    },
+}
+</script>
+
+<template>
+
+<br />
+<v-banner class=" mx-auto px-10 py-3 rounded-lg bg-dark text"  max-width="344"
+  elevation="10"
+  rounded
+  tile
+><h5 class="text-center">Iniciar Sesión</h5></v-banner>
+<br />
+
+    <v-card class="card-login mx-auto px-6 py-8 rounded-lg " max-width="344" elevation="5">
+        <v-form v-model="form" @submit.prevent="onSubmit" class="text">
+            <v-text-field v-model="email" :readonly="loading" :rules="[required]" class="mb-2 bg-dark rounded-lg" clearable label="Email" >
+            </v-text-field>
+
+            <br />
+
+            <v-text-field v-model="password" :readonly="loading" :rules="[required]" class="mb-2 bg-dark rounded-lg " clearable label="Password"
+                placeholder="Enter your password"></v-text-field>
+
+            <br />
+            <v-row  justify="space-around">
+            <v-btn :disabled="!form" :loading="loading" inlineblock color="dark" class=""  size="large" type="submit" elevation="4">
+            <RouterLink to="/loginuser/escaperoomgame"><a class="text">Acceder</a></RouterLink>
+            </v-btn>
+
+            <v-btn inlineblock color="dark"  size="large" type="submit" elevation="4" ><RouterLink to="/"><a class="text">Cancelar</a></RouterLink></v-btn></v-row>
+            
+        </v-form>
+    </v-card>
+</template>
+
+<style scoped>
+@import "../assets/Login.css";
+</style>

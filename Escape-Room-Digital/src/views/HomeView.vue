@@ -1,9 +1,34 @@
-<script setup>
-import TheWelcome from '../components/TheWelcome.vue'
-</script>
+<script setup></script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <div class="imagen">
+ 
+  <div class="container_home">
+    <div id="container_message_welcome">
+      <p id="message">
+        Bienvenido/a al Escape Room digital de Factoria F5, lugar donde los
+        sueños se pueden hacer realidad dependiendo del esfuerzo que le dediques
+        en esta aventura de pruebas de logica y código. Dispondrás de una hora
+        para completar dichas tareas, teniendo 45 min para las de lógica y 15
+        min para la de código. Tómate tu tiempo y a por todas, nos vemos a la
+        vuelta.
+      </p>
+    </div>
+    <RouterLink to="/landingpage">
+      <button id="button_home">
+
+        <a id="word_button">Empezar Pruebas</a>
+  
+      </button>
+
+    </RouterLink>
+  
+    
+  </div>
+  </div>
 </template>
+
+<style scoped>
+@import "../assets/styleHome.css"
+
+</style>

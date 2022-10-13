@@ -1,0 +1,31 @@
+.header-list-rooms {
+    background: rgba(255, 71, 2, 0.58);
+}
+
+.table {
+    border: 1px solid rgba(255, 71, 2, 0.58);
+}
+
+tr {
+    width: 80vw;
+}
+
+svg {
+    margin-top: 1vh;
+}
+
+.list-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#button_create {
+    display: flex;
+}
+
+#text_create {
+    margin-top: 2vh;
+    color: black;
+    font-size: 2vh;
+}

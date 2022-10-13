@@ -1,0 +1,22 @@
+a {
+    color: white;
+}
+
+#logear {
+    width: 30vh;
+}
+
+.margin {
+    padding: 1px;
+}
+
+.text{
+    color:aliceblue;
+    text-decoration: none;
+    margin: auto;
+    text-align: center;
+}
+
+.card-login {
+    background-color: #FF4702;
+}

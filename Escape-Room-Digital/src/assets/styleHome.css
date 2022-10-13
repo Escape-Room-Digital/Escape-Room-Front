@@ -1,0 +1,48 @@
+
+
+.container_home {
+    background-size:100%;
+    opacity: 80%;
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  #container_message_welcome {
+    width: 70vh;
+    height: 80vh;
+    border-radius: 10px;
+    background-color: black;
+    opacity:1;
+    
+  }
+  .logo_f5 {
+    height: 20vh;
+    width: 40vh;
+  }
+  #message {
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 13vh;
+    font-family: Poppins;
+
+  }
+  #button_home{
+    margin:3vh ;
+    width: 30vh;
+    height: 6vh;
+    border-radius: 10px;
+    background-color: black;
+      
+    
+  }
+  #word_button{
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    margin: 1vh;
+    font-family: Poppins;
+  }
